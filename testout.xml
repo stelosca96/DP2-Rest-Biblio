@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="5" failures="0" hostname="dp2-student" name="it.polito.dp2.BIB.ass3.tests.BibTests" skipped="0" tests="5" time="6.408" timestamp="2020-01-18T15:45:00">
+  <properties>
+    <property name="it.polito.dp2.BIB.ass3.ClientFactory" value="it.polito.dp2.BIB.sol3.client.ClientFactory" />
+    <property name="env.DESKTOP_SESSION" value="xfce" />
+    <property name="file.encoding.pkg" value="sun.io" />
+    <property name="java.home" value="/usr/lib/jvm/jdk1.8.0_141/jre" />
+    <property name="custom.dir" value="/home/dp2/Desktop/3r4/custom" />
+    <property name="sol.build.filepath" value="/home/dp2/Desktop/3r4/sol_build.xml" />
+    <property name="env.QT_LINUX_ACCESSIBILITY_ALWAYS_ON" value="1" />
+    <property name="env.GDM_LANG" value="en_US" />
+    <property name="env.DISPLAY" value=":0.0" />
+    <property name="debug" value="true" />
+    <property name="env.XDG_VTNR" value="7" />
+    <property name="Neo4JURL" value="http://localhost:7474/db" />
+    <property name="java.awt.headless" value="true" />
+    <property name="env.GLADE_CATALOG_PATH" value=":" />
+    <property name="env.XDG_GREETER_DATA_DIR" value="/var/lib/lightdm-data/dp2" />
+    <property name="java.endorsed.dirs" value="/usr/lib/jvm/jdk1.8.0_141/jre/lib/endorsed" />
+    <property name="BibInfo.BibReaderFactory" value="it.polito.dp2.BIB.Random.BibReaderFactoryImpl" />
+    <property name="env.LOGNAME" value="dp2" />
+    <property name="ant.file.BIB-3" value="/home/dp2/Desktop/3r4/build.xml" />
+    <property name="debuglevel" value="source,lines,vars" />
+    <property name="src.dir" value="/home/dp2/Desktop/3r4/src" />
+    <property name="env.XDG_SEAT" value="seat0" />
+    <property name="env.LC_PAPER" value="it_IT.UTF-8" />
+    <property name="env.SESSION_MANAGER" value="local/dp2-student:@/tmp/.ICE-unix/1848,unix/dp2-student:/tmp/.ICE-unix/1848" />
+    <property name="sun.os.patch.level" value="unknown" />
+    <property name="sol.build.file" value="sol_build.xml" />
+    <property name="java.vendor.url" value="http://java.oracle.com/" />
+    <property name="env.XDG_SEAT_PATH" value="/org/freedesktop/DisplayManager/Seat0" />
+    <property name="it.polito.dp2.BIB.ass3.URL" value="http://localhost:8080/BiblioSystem/rest" />
+    <property name="env.MANDATORY_PATH" value="/usr/share/gconf/xfce.mandatory.path" />
+    <property name="java.version" value="1.8.0_141" />
+    <property name="eclipse.pdebuild.home" value="/home/dp2/Software/eclipse/plugins/org.eclipse.pde.build_3.9.200.v20160204-0642/.//" />
+    <property name="gen.war.dir" value="/home/dp2/Desktop/3r4/war" />
+    <property name="env.OXYGEN_DISABLE_INNER_SHADOWS_HACK" value="1" />
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/" />
+    <property name="env.LANGUAGE" value="en_US" />
+    <property name="env.GDK_SCALE" value="1" />
+    <property name="env.XDG_MENU_PREFIX" value="xfce-" />
+    <property name="ant.project.invoked-targets" value="runFuncTest.real" />
+    <property name="env.XDG_DATA_DIRS" value="/usr/share/xfce:/usr/share/xfce4:/usr/local/share:/usr/share:/var/lib/snapd/desktop:/usr/share" />
+    <property name="env.GNOME_KEYRING_CONTROL" value="" />
+    <property name="env.UPSTART_SESSION" value="unix:abstract=/com/ubuntu/upstart-session/1000/1283" />
+    <property name="user.name" value="dp2" />
+    <property name="env.LANG" value="en_US.UTF-8" />
+    <property name="env.LC_MONETARY" value="it_IT.UTF-8" />
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle" />
+    <property name="sun.jnu.encoding" value="UTF-8" />
+    <property name="env.DBUS_SESSION_BUS_ADDRESS" value="unix:abstract=/tmp/dbus-0jCBZ8rzIX" />
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
+    <property name="env.LC_NAME" value="it_IT.UTF-8" />
+    <property name="lib.dir" value="/home/dp2/Desktop/3r4/lib" />
+    <property name="java.specification.name" value="Java Platform API Specification" />
+    <property name="env.GLADE_PIXMAP_PATH" value=":" />
+    <property name="user.timezone" value="" />
+    <property name="neo4j.location" value="/opt/neo4j-community-3.2.3" />
+    <property name="path.separator" value=":" />
+    <property name="tomcatUsername" value="root" />
+    <property name="env.XMODIFIERS" value="" />
+    <property name="file.encoding" value="UTF-8" />
+    <property name="PORT" value="8080" />
+    <property name="ant.project.default-target" value="package-service" />
+    <property name="env.HOME" value="/home/dp2" />
+    <property name="catalina.home.bin.dir" value="/opt/tomcat/apache-tomcat-8.5.20/bin" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner it.polito.dp2.BIB.ass3.tests.BibTests methods=testCreateBookshelf,testBookShelfOperations,testRemoveItemFromBibliography,testNumberOfReads,testNonExistingBookshelf skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/home/dp2/Desktop/3r4/testout.xml formatter=org.apache.tools.ant.taskdefs.optional.junit.PlainJUnitResultFormatter crashfile=/home/dp2/Desktop/3r4/junitvmwatcher4225927683238881976.properties propsfile=/home/dp2/Desktop/3r4/junit6180703237634563019.properties" />
+    <property name="tomcatUrl" value="http://localhost:8080/manager/text" />
+    <property name="ant.file" value="/home/dp2/Desktop/3r4/build.xml" />
+    <property name="env.LC_TELEPHONE" value="it_IT.UTF-8" />
+    <property name="env.GTK2_MODULES" value="overlay-scrollbar" />
+    <property name="java.io.tmpdir" value="/tmp" />
+    <property name="env.LC_IDENTIFICATION" value="it_IT.UTF-8" />
+    <property name="env.GNOME_KEYRING_PID" value="" />
+    <property name="user.language" value="en" />
+    <property name="env.UPSTART_EVENTS" value="started xsession" />
+    <property name="line.separator" value="&#xa;" />
+    <property name="target" value="1.8" />
+    <property name="server.location" value="/opt/tomcat/apache-tomcat-8.5.20" />
+    <property name="env.SSH_AGENT_PID" value="1857" />
+    <property name="env.CLUTTER_IM_MODULE" value="" />
+    <property name="env.GLADE_MODULE_PATH" value=":" />
+    <property name="java.vm.info" value="mixed mode" />
+    <property name="source" value="1.8" />
+    <property name="webContent.dir" value="/home/dp2/Desktop/3r4/WebContent" />
+    <property name="gen.tomcat.service.dir" value="/home/dp2/Desktop/3r4/target" />
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
+    <property name="ant.file.tomcat-build" value="/home/dp2/Desktop/3r4/tomcat-build.xml" />
+    <property name="root.location" value="/home/dp2/Desktop/3r4" />
+    <property name="it.polito.dp2.BIB.ass3.PORT" value="8080" />
+    <property name="env.LC_MEASUREMENT" value="it_IT.UTF-8" />
+    <property name="env.IM_CONFIG_PHASE" value="1" />
+    <property name="ant.file.neo4j-build" value="/home/dp2/Desktop/3r4/neo4j-build.xml" />
+    <property name="env.LC_TIME" value="it_IT.UTF-8" />
+    <property name="env.GDMSESSION" value="xfce" />
+    <property name="eclipse.pdebuild.templates" value="/home/dp2/Software/eclipse/plugins/org.eclipse.pde.build_3.9.200.v20160204-0642/templates//" />
+    <property name="shared.location" value="/opt/dp2/shared" />
+    <property name="env.QT_ACCESSIBILITY" value="1" />
+    <property name="env.XDG_SESSION_DESKTOP" value="xfce" />
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob" />
+    <property name="env.DEFAULTS_PATH" value="/usr/share/gconf/xfce.default.path" />
+    <property name="env.GDK_CORE_DEVICE_EVENTS" value="1" />
+    <property name="catalina.home" value="/opt/tomcat/apache-tomcat-8.5.20/bin/.." />
+    <property name="ant.version" value="Apache Ant(TM) version 1.9.6 compiled on June 29 2015" />
+    <property name="env.XDG_SESSION_TYPE" value="x11" />
+    <property name="ant.file.type.BIB-3" value="file" />
+    <property name="env.XDG_SESSION_PATH" value="/org/freedesktop/DisplayManager/Session0" />
+    <property name="env.JOB" value="dbus" />
+    <property name="os.name" value="Linux" />
+    <property name="java.specification.vendor" value="Oracle Corporation" />
+    <property name="ant.file.type.catalina-tasks" value="file" />
+    <property name="ant.file.type.neo4j-build" value="file" />
+    <property name="java.vm.name" value="Java HotSpot(TM) Server VM" />
+    <property name="env.QT_IM_MODULE" value="" />
+    <property name="java.library.path" value="/usr/lib/jvm/jdk1.8.0_141/jre/lib/i386/server:/usr/lib/jvm/jdk1.8.0_141/jre/lib/i386:/usr/lib/jvm/jdk1.8.0_141/jre/../lib/i386:/usr/lib/jvm/jdk1.8.0_141/jre/lib/i386/client:/usr/lib/jvm/jdk1.8.0_141/jre/lib/i386::/usr/java/packages/lib/i386:/lib:/usr/lib" />
+    <property name="env.PATH" value="/home/dp2/bin:/home/dp2/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/opt/tomcat/apache-tomcat-8.5.20/bin:/usr/lib/jvm/jdk1.8.0_141/bin:/opt/apache-ant-1.9.13/bin:/snap/bin" />
+    <property name="eclipse.pdebuild.scripts" value="/home/dp2/Software/eclipse/plugins/org.eclipse.pde.build_3.9.200.v20160204-0642/scripts//" />
+    <property name="ant.java.version" value="1.8" />
+    <property name="basedir" value="/home/dp2/Desktop/3r4" />
+    <property name="java.class.version" value="52.0" />
+    <property name="env.SHLVL" value="0" />
+    <property name="env.LD_LIBRARY_PATH" value="/usr/lib/jvm/jdk1.8.0_141/jre/lib/i386/server:/usr/lib/jvm/jdk1.8.0_141/jre/lib/i386:/usr/lib/jvm/jdk1.8.0_141/jre/../lib/i386:/usr/lib/jvm/jdk1.8.0_141/jre/lib/i386/client:/usr/lib/jvm/jdk1.8.0_141/jre/lib/i386:" />
+    <property name="ext.lib.dir" value="/opt/dp2/shared/lib" />
+    <property name="sol.zip" value="ass3.zip" />
+    <property name="ant.home" value="/home/dp2/Software/eclipse/plugins/org.apache.ant_1.9.6.v201510161327" />
+    <property name="env.UPSTART_JOB" value="startxfce4" />
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/jdk1.8.0_141/jre/lib/i386" />
+    <property name="build.dir" value="/home/dp2/Desktop/3r4/build" />
+    <property name="sun.management.compiler" value="HotSpot Tiered Compilers" />
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment" />
+    <property name="sourceFileName" value="/home/dp2/Desktop/3r4/xsd/biblio.xml" />
+    <property name="env.USER" value="dp2" />
+    <property name="env.GTK_IM_MODULE" value="" />
+    <property name="env.GTK_MODULES" value="gail:atk-bridge" />
+    <property name="ant.file.catalina-tasks" value="/opt/tomcat/apache-tomcat-8.5.20/bin/catalina-tasks.xml" />
+    <property name="ass3.location" value="/home/dp2/Desktop/3r4" />
+    <property name="ant.project.name" value="BIB-3" />
+    <property name="env.SESSIONTYPE" value="" />
+    <property name="java.vm.specification.version" value="1.8" />
+    <property name="env.NLSPATH" value="/usr/dt/lib/nls/msg/%L/%N.cat" />
+    <property name="awt.toolkit" value="sun.awt.X11.XToolkit" />
+    <property name="doc.dir" value="/home/dp2/Desktop/3r4/doc" />
+    <property name="sun.cpu.isalist" value="" />
+    <property name="java.ext.dirs" value="/usr/lib/jvm/jdk1.8.0_141/jre/lib/ext:/usr/java/packages/lib/ext" />
+    <property name="os.version" value="4.15.0-70-generic" />
+    <property name="env.QT_QPA_PLATFORMTHEME" value="appmenu-qt5" />
+    <property name="user.home" value="/home/dp2" />
+    <property name="env.XDG_CURRENT_DESKTOP" value="XFCE" />
+    <property name="test.class" value="it.polito.dp2.BIB.ass3.tests.BibTests" />
+    <property name="java.vm.vendor" value="Oracle Corporation" />
+    <property name="env.JAVA_HOME" value="/usr/lib/jvm/jdk1.8.0_141" />
+    <property name="env.SESSION" value="xfce" />
+    <property name="env.XDG_SESSION_ID" value="c2" />
+    <property name="env.XAUTHORITY" value="/home/dp2/.Xauthority" />
+    <property name="user.dir" value="/home/dp2/Desktop/3r4" />
+    <property name="env.XFILESEARCHPATH" value="/usr/dt/app-defaults/%L/Dt" />
+    <property name="env.PWD" value="/home/dp2" />
+    <property name="env.LIBOVERLAY_SCROLLBAR" value="0" />
+    <property name="sun.cpu.endian" value="little" />
+    <property name="sol3.dir" value="src/it/polito/dp2/BIB/sol3" />
+    <property name="tomcatPort" value="8080" />
+    <property name="java.vm.version" value="25.141-b15" />
+    <property name="java.class.path" value="/home/dp2/Desktop/3r4/build:/home/dp2/Desktop/3r4/lib/BIB.jar:/home/dp2/Desktop/3r4/lib/BIBRandom.jar:/home/dp2/Desktop/3r4/lib/ass1.jar:/home/dp2/Desktop/3r4/lib/ass2.jar:/home/dp2/Desktop/3r4/lib/ass3.jar:/home/dp2/Desktop/3r4/lib/db.jar:/home/dp2/Desktop/3r4/lib/hamcrest-core-1.3.jar:/home/dp2/Desktop/3r4/lib/junit-4.12.jar:/home/dp2/Desktop/3r4/lib/swagger-annotations-1.5.0.jar:/home/dp2/Desktop/3r4/lib/swagger-core-1.5.0.jar:/home/dp2/Desktop/3r4/lib/swagger-jaxrs-1.5.0.jar:/home/dp2/Desktop/3r4/lib/swagger-jersey2-jaxrs-1.5.0.jar:/home/dp2/Desktop/3r4/lib/swagger-models-1.5.0.jar:/opt/dp2/shared/lib/activation-1.1.jar:/opt/dp2/shared/lib/annotations-2.0.1.jar:/opt/dp2/shared/lib/aopalliance-repackaged-2.5.0-b32.jar:/opt/dp2/shared/lib/codemodel-2.6.jar:/opt/dp2/shared/lib/commons-lang-2.6.jar:/opt/dp2/shared/lib/commons-lang3-3.2.1.jar:/opt/dp2/shared/lib/comresrcgen-1.0.jar:/opt/dp2/shared/lib/gson-2.2.4.jar:/opt/dp2/shared/lib/guava-15.0.jar:/opt/dp2/shared/lib/hk2-api-2.5.0-b32.jar:/opt/dp2/shared/lib/hk2-locator-2.5.0-b32.jar:/opt/dp2/shared/lib/hk2-utils-2.5.0-b32.jar:/opt/dp2/shared/lib/istack-commons-runtime-2.21.jar:/opt/dp2/shared/lib/istack-commons-tools-2.21.jar:/opt/dp2/shared/lib/jackson-annotations-2.4.0.jar:/opt/dp2/shared/lib/jackson-core-2.4.2.jar:/opt/dp2/shared/lib/jackson-core-asl-1.9.11.jar:/opt/dp2/shared/lib/jackson-databind-2.4.2.jar:/opt/dp2/shared/lib/jackson-dataformat-xml-2.4.2.jar:/opt/dp2/shared/lib/jackson-dataformat-yaml-2.4.2.jar:/opt/dp2/shared/lib/jackson-datatype-joda-2.4.2.jar:/opt/dp2/shared/lib/jackson-jaxrs-base-2.4.2.jar:/opt/dp2/shared/lib/jackson-jaxrs-json-provider-2.4.2.jar:/opt/dp2/shared/lib/jackson-mapper-asl-1.9.11.jar:/opt/dp2/shared/lib/jackson-module-jaxb-annotations-2.4.2.jar:/opt/dp2/shared/lib/javassist-3.20.0-GA.jar:/opt/dp2/shared/lib/javax.annotation-api-1.2.jar:/opt/dp2/shared/lib/javax.inject-2.5.0-b32.jar:/opt/dp2/shared/lib/javax.json-1.0.4.jar:/opt/dp2/shared/lib/javax.ws.rs-api-2.0.1.jar:/opt/dp2/shared/lib/jaxb-api-2.2.12-b140109.1041.jar:/opt/dp2/shared/lib/jaxb-core-2.2.11.jar:/opt/dp2/shared/lib/jaxb-runtime-2.2.11.jar:/opt/dp2/shared/lib/jaxb-xjc-2.2.11.jar:/opt/dp2/shared/lib/jersey-client-1.19.1.jar:/opt/dp2/shared/lib/jersey-client-2.25.1.jar:/opt/dp2/shared/lib/jersey-common-2.25.1.jar:/opt/dp2/shared/lib/jersey-container-servlet-2.25.1.jar:/opt/dp2/shared/lib/jersey-container-servlet-core-2.25.1.jar:/opt/dp2/shared/lib/jersey-core-1.19.1.jar:/opt/dp2/shared/lib/jersey-entity-filtering-2.25.1.jar:/opt/dp2/shared/lib/jersey-guava-2.25.1.jar:/opt/dp2/shared/lib/jersey-media-jaxb-2.25.1.jar:/opt/dp2/shared/lib/jersey-media-moxy-2.25.1.jar:/opt/dp2/shared/lib/jersey-media-multipart-2.25.1.jar:/opt/dp2/shared/lib/jersey-server-2.25.1.jar:/opt/dp2/shared/lib/joda-time-2.2.jar:/opt/dp2/shared/lib/json-simple-1.1.jar:/opt/dp2/shared/lib/jsonschema2pojo-core-0.4.0.jar:/opt/dp2/shared/lib/localizer-1.0.jar:/opt/dp2/shared/lib/mimepull-1.9.6.jar:/opt/dp2/shared/lib/org.eclipse.persistence.asm-2.6.0.jar:/opt/dp2/shared/lib/org.eclipse.persistence.core-2.6.0.jar:/opt/dp2/shared/lib/org.eclipse.persistence.moxy-2.6.0.jar:/opt/dp2/shared/lib/osgi-resource-locator-1.0.1.jar:/opt/dp2/shared/lib/reflections-0.9.9.jar:/opt/dp2/shared/lib/rngom-2.2.11.jar:/opt/dp2/shared/lib/slf4j-api-1.6.3.jar:/opt/dp2/shared/lib/stax2-api-3.1.4.jar:/opt/dp2/shared/lib/txw2-2.2.11.jar:/opt/dp2/shared/lib/validation-api-1.1.0.Final.jar:/opt/dp2/shared/lib/wadl-ant-1.1.6.jar:/opt/dp2/shared/lib/wadl-core-1.1.6.jar:/opt/dp2/shared/lib/wadl-xslt-1.1.6.jar:/opt/dp2/shared/lib/xsom-20140925.jar:/home/dp2/Software/eclipse/plugins/org.apache.ant_1.9.6.v201510161327/lib/ant-launcher.jar:/home/dp2/Software/eclipse/plugins/org.apache.ant_1.9.6.v201510161327/lib/ant.jar:/home/dp2/Software/eclipse/plugins/org.apache.ant_1.9.6.v201510161327/lib/ant-junit.jar:/home/dp2/Software/eclipse/plugins/org.apache.ant_1.9.6.v201510161327/lib/ant-junit4.jar" />
+    <property name="ant.library.dir" value="/home/dp2/Software/eclipse/plugins/org.apache.ant_1.9.6.v201510161327/lib" />
+    <property name="env.LC_ADDRESS" value="it_IT.UTF-8" />
+    <property name="os.arch" value="i386" />
+    <property name="env.LC_NUMERIC" value="it_IT.UTF-8" />
+    <property name="tomcatPassword" value="root" />
+    <property name="sun.java.launcher" value="SUN_STANDARD" />
+    <property name="ant.core.lib" value="/home/dp2/Software/eclipse/plugins/org.apache.ant_1.9.6.v201510161327/lib/ant.jar" />
+    <property name="java.vm.specification.vendor" value="Oracle Corporation" />
+    <property name="env.UPSTART_INSTANCE" value="" />
+    <property name="URL" value="http://localhost:8080/BiblioSystem/rest" />
+    <property name="file.separator" value="/" />
+    <property name="java.runtime.version" value="1.8.0_141-b15" />
+    <property name="sun.boot.class.path" value="/usr/lib/jvm/jdk1.8.0_141/jre/lib/resources.jar:/usr/lib/jvm/jdk1.8.0_141/jre/lib/rt.jar:/usr/lib/jvm/jdk1.8.0_141/jre/lib/sunrsasign.jar:/usr/lib/jvm/jdk1.8.0_141/jre/lib/jsse.jar:/usr/lib/jvm/jdk1.8.0_141/jre/lib/jce.jar:/usr/lib/jvm/jdk1.8.0_141/jre/lib/charsets.jar:/usr/lib/jvm/jdk1.8.0_141/jre/lib/jfr.jar:/usr/lib/jvm/jdk1.8.0_141/jre/classes" />
+    <property name="env.SSH_AUTH_SOCK" value="/tmp/ssh-OycIkyf8Dibl/agent.1856" />
+    <property name="env.QT4_IM_MODULE" value="" />
+    <property name="env.XDG_RUNTIME_DIR" value="/run/user/1000" />
+    <property name="env.XDG_CONFIG_DIRS" value="/etc/xdg/xdg-xfce:/usr/share/upstart/xdg:/etc/xdg:/etc/xdg" />
+    <property name="user.country" value="US" />
+    <property name="env.ANT_HOME" value="/home/dp2/Software/eclipse/plugins/org.apache.ant_1.9.6.v201510161327" />
+    <property name="env.SHELL" value="/bin/bash" />
+    <property name="env.INSTANCE" value="" />
+    <property name="xsd.dir" value="/home/dp2/Desktop/3r4/xsd" />
+    <property name="service.name" value="BiblioSystem" />
+    <property name="java.vendor" value="Oracle Corporation" />
+    <property name="env.CATALINA_HOME" value="/opt/tomcat/apache-tomcat-8.5.20" />
+    <property name="java.specification.version" value="1.8" />
+    <property name="ant.file.type.tomcat-build" value="file" />
+    <property name="sun.arch.data.model" value="32" />
+  </properties>
+  <testcase classname="it.polito.dp2.BIB.ass3.tests.BibTests" name="testRemoveItemFromBibliography" time="0.817">
+    <error message="MessageBodyWriter not found for media type=application/json, type=class it.polito.dp2.BIB.sol3.client.ItemReaderImpl, genericType=class it.polito.dp2.BIB.sol3.client.ItemReaderImpl." type="org.glassfish.jersey.message.internal.MessageBodyProviderNotFoundException">org.glassfish.jersey.message.internal.MessageBodyProviderNotFoundException: MessageBodyWriter not found for media type=application/json, type=class it.polito.dp2.BIB.sol3.client.ItemReaderImpl, genericType=class it.polito.dp2.BIB.sol3.client.ItemReaderImpl.
+	at org.glassfish.jersey.message.internal.WriterInterceptorExecutor$TerminalWriterInterceptor.aroundWriteTo(WriterInterceptorExecutor.java:247)
+	at org.glassfish.jersey.message.internal.WriterInterceptorExecutor.proceed(WriterInterceptorExecutor.java:162)
+	at org.glassfish.jersey.message.internal.MessageBodyFactory.writeTo(MessageBodyFactory.java:1130)
+	at org.glassfish.jersey.client.ClientRequest.doWriteEntity(ClientRequest.java:517)
+	at org.glassfish.jersey.client.ClientRequest.writeEntity(ClientRequest.java:499)
+	at org.glassfish.jersey.client.internal.HttpUrlConnector._apply(HttpUrlConnector.java:393)
+	at org.glassfish.jersey.client.internal.HttpUrlConnector.apply(HttpUrlConnector.java:285)
+	at org.glassfish.jersey.client.ClientRuntime.invoke(ClientRuntime.java:252)
+	at org.glassfish.jersey.client.JerseyInvocation$2.call(JerseyInvocation.java:701)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:315)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:297)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:228)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:444)
+	at org.glassfish.jersey.client.JerseyInvocation.invoke(JerseyInvocation.java:697)
+	at org.glassfish.jersey.client.JerseyInvocation$Builder.method(JerseyInvocation.java:448)
+	at org.glassfish.jersey.client.JerseyInvocation$Builder.put(JerseyInvocation.java:332)
+	at it.polito.dp2.BIB.sol3.client.BookshelfReaderImpl.addItem(BookshelfReaderImpl.java:46)
+	at it.polito.dp2.BIB.ass3.tests.BibTests.testRemoveItemFromBibliography(Unknown Source)
+</error>
+  </testcase>
+  <testcase classname="it.polito.dp2.BIB.ass3.tests.BibTests" name="testBookShelfOperations" time="0.378">
+    <error message="MessageBodyWriter not found for media type=application/json, type=class it.polito.dp2.BIB.sol3.client.ItemReaderImpl, genericType=class it.polito.dp2.BIB.sol3.client.ItemReaderImpl." type="org.glassfish.jersey.message.internal.MessageBodyProviderNotFoundException">org.glassfish.jersey.message.internal.MessageBodyProviderNotFoundException: MessageBodyWriter not found for media type=application/json, type=class it.polito.dp2.BIB.sol3.client.ItemReaderImpl, genericType=class it.polito.dp2.BIB.sol3.client.ItemReaderImpl.
+	at org.glassfish.jersey.message.internal.WriterInterceptorExecutor$TerminalWriterInterceptor.aroundWriteTo(WriterInterceptorExecutor.java:247)
+	at org.glassfish.jersey.message.internal.WriterInterceptorExecutor.proceed(WriterInterceptorExecutor.java:162)
+	at org.glassfish.jersey.message.internal.MessageBodyFactory.writeTo(MessageBodyFactory.java:1130)
+	at org.glassfish.jersey.client.ClientRequest.doWriteEntity(ClientRequest.java:517)
+	at org.glassfish.jersey.client.ClientRequest.writeEntity(ClientRequest.java:499)
+	at org.glassfish.jersey.client.internal.HttpUrlConnector._apply(HttpUrlConnector.java:393)
+	at org.glassfish.jersey.client.internal.HttpUrlConnector.apply(HttpUrlConnector.java:285)
+	at org.glassfish.jersey.client.ClientRuntime.invoke(ClientRuntime.java:252)
+	at org.glassfish.jersey.client.JerseyInvocation$2.call(JerseyInvocation.java:701)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:315)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:297)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:228)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:444)
+	at org.glassfish.jersey.client.JerseyInvocation.invoke(JerseyInvocation.java:697)
+	at org.glassfish.jersey.client.JerseyInvocation$Builder.method(JerseyInvocation.java:448)
+	at org.glassfish.jersey.client.JerseyInvocation$Builder.put(JerseyInvocation.java:332)
+	at it.polito.dp2.BIB.sol3.client.BookshelfReaderImpl.addItem(BookshelfReaderImpl.java:46)
+	at it.polito.dp2.BIB.ass3.tests.BibTests.addItemsBookshelf(Unknown Source)
+	at it.polito.dp2.BIB.ass3.tests.BibTests.testBookShelfOperations(Unknown Source)
+</error>
+  </testcase>
+  <testcase classname="it.polito.dp2.BIB.ass3.tests.BibTests" name="testNonExistingBookshelf" time="0.253">
+    <error message="Unexpected exception, expected&lt;it.polito.dp2.BIB.ass3.DestroyedBookshelfException&gt; but was&lt;org.glassfish.jersey.message.internal.MessageBodyProviderNotFoundException&gt;" type="java.lang.Exception">java.lang.Exception: Unexpected exception, expected&lt;it.polito.dp2.BIB.ass3.DestroyedBookshelfException&gt; but was&lt;org.glassfish.jersey.message.internal.MessageBodyProviderNotFoundException&gt;
+Caused by: org.glassfish.jersey.message.internal.MessageBodyProviderNotFoundException: MessageBodyWriter not found for media type=application/json, type=class it.polito.dp2.BIB.sol3.client.ItemReaderImpl, genericType=class it.polito.dp2.BIB.sol3.client.ItemReaderImpl.
+	at org.glassfish.jersey.message.internal.WriterInterceptorExecutor$TerminalWriterInterceptor.aroundWriteTo(WriterInterceptorExecutor.java:247)
+	at org.glassfish.jersey.message.internal.WriterInterceptorExecutor.proceed(WriterInterceptorExecutor.java:162)
+	at org.glassfish.jersey.message.internal.MessageBodyFactory.writeTo(MessageBodyFactory.java:1130)
+	at org.glassfish.jersey.client.ClientRequest.doWriteEntity(ClientRequest.java:517)
+	at org.glassfish.jersey.client.ClientRequest.writeEntity(ClientRequest.java:499)
+	at org.glassfish.jersey.client.internal.HttpUrlConnector._apply(HttpUrlConnector.java:393)
+	at org.glassfish.jersey.client.internal.HttpUrlConnector.apply(HttpUrlConnector.java:285)
+	at org.glassfish.jersey.client.ClientRuntime.invoke(ClientRuntime.java:252)
+	at org.glassfish.jersey.client.JerseyInvocation$2.call(JerseyInvocation.java:701)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:315)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:297)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:228)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:444)
+	at org.glassfish.jersey.client.JerseyInvocation.invoke(JerseyInvocation.java:697)
+	at org.glassfish.jersey.client.JerseyInvocation$Builder.method(JerseyInvocation.java:448)
+	at org.glassfish.jersey.client.JerseyInvocation$Builder.put(JerseyInvocation.java:332)
+	at it.polito.dp2.BIB.sol3.client.BookshelfReaderImpl.addItem(BookshelfReaderImpl.java:46)
+	at it.polito.dp2.BIB.ass3.tests.BibTests.testNonExistingBookshelf(Unknown Source)
+</error>
+  </testcase>
+  <testcase classname="it.polito.dp2.BIB.ass3.tests.BibTests" name="testCreateBookshelf" time="0.011">
+    <error message="HTTP 400 Bad Request" type="javax.ws.rs.BadRequestException">javax.ws.rs.BadRequestException: HTTP 400 Bad Request
+	at org.glassfish.jersey.client.JerseyInvocation.convertToException(JerseyInvocation.java:1011)
+	at org.glassfish.jersey.client.JerseyInvocation.translate(JerseyInvocation.java:819)
+	at org.glassfish.jersey.client.JerseyInvocation.access$700(JerseyInvocation.java:92)
+	at org.glassfish.jersey.client.JerseyInvocation$2.call(JerseyInvocation.java:701)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:315)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:297)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:228)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:444)
+	at org.glassfish.jersey.client.JerseyInvocation.invoke(JerseyInvocation.java:697)
+	at org.glassfish.jersey.client.JerseyInvocation$Builder.method(JerseyInvocation.java:448)
+	at org.glassfish.jersey.client.JerseyInvocation$Builder.post(JerseyInvocation.java:349)
+	at it.polito.dp2.BIB.sol3.client.ClientFactoryImpl.createBookshelf(ClientFactoryImpl.java:42)
+	at it.polito.dp2.BIB.ass3.tests.BibTests.testCreateBookshelf(Unknown Source)
+</error>
+  </testcase>
+  <testcase classname="it.polito.dp2.BIB.ass3.tests.BibTests" name="testNumberOfReads" time="0.186">
+    <error message="MessageBodyWriter not found for media type=application/json, type=class it.polito.dp2.BIB.sol3.client.ItemReaderImpl, genericType=class it.polito.dp2.BIB.sol3.client.ItemReaderImpl." type="org.glassfish.jersey.message.internal.MessageBodyProviderNotFoundException">org.glassfish.jersey.message.internal.MessageBodyProviderNotFoundException: MessageBodyWriter not found for media type=application/json, type=class it.polito.dp2.BIB.sol3.client.ItemReaderImpl, genericType=class it.polito.dp2.BIB.sol3.client.ItemReaderImpl.
+	at org.glassfish.jersey.message.internal.WriterInterceptorExecutor$TerminalWriterInterceptor.aroundWriteTo(WriterInterceptorExecutor.java:247)
+	at org.glassfish.jersey.message.internal.WriterInterceptorExecutor.proceed(WriterInterceptorExecutor.java:162)
+	at org.glassfish.jersey.message.internal.MessageBodyFactory.writeTo(MessageBodyFactory.java:1130)
+	at org.glassfish.jersey.client.ClientRequest.doWriteEntity(ClientRequest.java:517)
+	at org.glassfish.jersey.client.ClientRequest.writeEntity(ClientRequest.java:499)
+	at org.glassfish.jersey.client.internal.HttpUrlConnector._apply(HttpUrlConnector.java:393)
+	at org.glassfish.jersey.client.internal.HttpUrlConnector.apply(HttpUrlConnector.java:285)
+	at org.glassfish.jersey.client.ClientRuntime.invoke(ClientRuntime.java:252)
+	at org.glassfish.jersey.client.JerseyInvocation$2.call(JerseyInvocation.java:701)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:315)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:297)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:228)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:444)
+	at org.glassfish.jersey.client.JerseyInvocation.invoke(JerseyInvocation.java:697)
+	at org.glassfish.jersey.client.JerseyInvocation$Builder.method(JerseyInvocation.java:448)
+	at org.glassfish.jersey.client.JerseyInvocation$Builder.put(JerseyInvocation.java:332)
+	at it.polito.dp2.BIB.sol3.client.BookshelfReaderImpl.addItem(BookshelfReaderImpl.java:46)
+	at it.polito.dp2.BIB.ass3.tests.BibTests.addItemsBookshelf(Unknown Source)
+	at it.polito.dp2.BIB.ass3.tests.BibTests.testNumberOfReads(Unknown Source)
+</error>
+  </testcase>
+  <system-out><![CDATA[Reference BibReader: Using file: xsd/biblio.xml
+property: http://localhost:8080/BiblioSystem/rest
+Reference BibReader: Using file: xsd/biblio.xml
+DEBUG: starting testRemoveItemFromBibliography
+Response code for creating an item: 201
+DEBUG: starting testBookShelfOperations
+DEBUG: starting testNonExistingBookshelf
+DEBUG: starting testCreateBookshelf
+DEBUG: starting testNumberOfReads
+]]></system-out>
+  <system-err><![CDATA[Jan 18, 2020 4:45:05 PM org.glassfish.jersey.message.internal.WriterInterceptorExecutor$TerminalWriterInterceptor aroundWriteTo
+SEVERE: MessageBodyWriter not found for media type=application/json, type=class it.polito.dp2.BIB.sol3.client.ItemReaderImpl, genericType=class it.polito.dp2.BIB.sol3.client.ItemReaderImpl.
+Jan 18, 2020 4:45:05 PM org.glassfish.jersey.message.internal.WriterInterceptorExecutor$TerminalWriterInterceptor aroundWriteTo
+SEVERE: MessageBodyWriter not found for media type=application/json, type=class it.polito.dp2.BIB.sol3.client.ItemReaderImpl, genericType=class it.polito.dp2.BIB.sol3.client.ItemReaderImpl.
+Jan 18, 2020 4:45:06 PM org.glassfish.jersey.message.internal.WriterInterceptorExecutor$TerminalWriterInterceptor aroundWriteTo
+SEVERE: MessageBodyWriter not found for media type=application/json, type=class it.polito.dp2.BIB.sol3.client.ItemReaderImpl, genericType=class it.polito.dp2.BIB.sol3.client.ItemReaderImpl.
+Jan 18, 2020 4:45:06 PM org.glassfish.jersey.message.internal.WriterInterceptorExecutor$TerminalWriterInterceptor aroundWriteTo
+SEVERE: MessageBodyWriter not found for media type=application/json, type=class it.polito.dp2.BIB.sol3.client.ItemReaderImpl, genericType=class it.polito.dp2.BIB.sol3.client.ItemReaderImpl.
+]]></system-err>
+</testsuite>
