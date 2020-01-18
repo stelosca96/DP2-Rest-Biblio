@@ -2,6 +2,7 @@ package it.polito.dp2.BIB.sol3.resources;
 
 import it.polito.dp2.BIB.sol3.service.jaxb.*;
 import it.polito.dp2.BIB.sol3.service.ItemReaderImpl;
+import it.polito.dp2.BIB.ass3.ServiceException;
 import it.polito.dp2.BIB.sol3.model.EBiblio;
 import it.polito.dp2.BIB.sol3.service.BadRequestServiceException;
 import it.polito.dp2.BIB.sol3.service.BiblioService;
@@ -510,8 +511,14 @@ public class BiblioResources {
 			service.addBookShelfItem(name, id);
 		} catch (NotAcceptableException e1) {
 			throw new NotAcceptableException(e1.getCause() + " " + e1.getMessage());
-		} catch (Exception e) {
-			throw new BadRequestException(e.getCause() + " " + e.getMessage());
+		} catch (BadRequestException e2) {
+			throw new BadRequestException(e2.getCause() + " " + e2.getMessage());
+		}
+		catch (NotFoundException e3) {
+			throw new NotFoundException(e3.getCause() + " " + e3.getMessage());
+		}
+		catch (Exception e) {
+			throw new InternalServerErrorException(e.getCause() + " " + e.getMessage());
 		}
 		return id.toString();
 	}

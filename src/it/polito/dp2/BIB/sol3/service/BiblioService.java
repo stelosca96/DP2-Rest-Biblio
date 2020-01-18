@@ -167,7 +167,7 @@ public class BiblioService {
 	public void addBookShelfItem(String bookshelf, BigInteger id) throws Exception {
 		Item i = n4jDb.getItem(id);
 		if(i == null) //todo: gestire diversamente
-			throw new UnknownItemException();
+			throw new BadRequestException();
 		rutil.completeItem(i, id);
 		n4jDbBS.addItem(i, bookshelf);
 	}

@@ -4,10 +4,15 @@ import java.math.BigInteger;
 import java.util.HashSet;
 import java.util.Set;
 
+import javax.ws.rs.BadRequestException;
+import javax.ws.rs.NotAcceptableException;
+import javax.ws.rs.NotFoundException;
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.Entity;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
+
 
 import it.polito.dp2.BIB.ass3.DestroyedBookshelfException;
 import it.polito.dp2.BIB.ass3.ItemReader;
@@ -16,13 +21,13 @@ import it.polito.dp2.BIB.ass3.TooManyItemsException;
 import it.polito.dp2.BIB.ass3.UnknownItemException;
 
 public class BookshelfReaderImpl implements it.polito.dp2.BIB.ass3.Bookshelf{
-	it.polito.dp2.BIB.sol3.client.Bookshelves.Bookshelf b;
+	it.polito.dp2.BIB.sol3.client.Bookshelves.Bookshelf bookshelf;
 	javax.ws.rs.client.Client client;
 	WebTarget target;
 	static String uri = "http://localhost:8080/BiblioSystem/rest";
 
 	public BookshelfReaderImpl(it.polito.dp2.BIB.sol3.client.Bookshelves.Bookshelf i) {
-		this.b = i;
+		this.bookshelf = i;
 		BookshelfReaderImpl.uri = uri.toString();
 		client = ClientBuilder.newClient();
 		target = client.target(uri).path("biblio");
@@ -30,9 +35,9 @@ public class BookshelfReaderImpl implements it.polito.dp2.BIB.ass3.Bookshelf{
 	
 	@Override
 	public String getName() throws DestroyedBookshelfException {
-		if(b==null)
+		if(bookshelf==null)
 			throw new DestroyedBookshelfException();
-		return b.getName();
+		return bookshelf.getName();
 	}
 
 	@Override
@@ -40,21 +45,38 @@ public class BookshelfReaderImpl implements it.polito.dp2.BIB.ass3.Bookshelf{
 			throws DestroyedBookshelfException, UnknownItemException, TooManyItemsException, ServiceException {
 		if(!(item instanceof ItemReaderImpl))
 			throw new UnknownItemException("You have to use ItemReaderImpl");
-		String id = target.path("/bookshelves/").
+		ItemReaderImpl i = (ItemReaderImpl) item;
+		try{
+		 target.path("/bookshelves/").
 				path(getName()).
-				path("1").
-				request(MediaType.APPLICATION_JSON_TYPE).put(Entity.json(item), String.class);
-		return;
+				path(selfToBigIteger(i.getSelf()).toString()).
+				request(MediaType.APPLICATION_JSON_TYPE).post(null);
+		}catch(NotAcceptableException e1){
+			 throw new TooManyItemsException();
+		}
+		catch (NotFoundException e2) {
+			throw new DestroyedBookshelfException();
+		}
+		catch (BadRequestException e3) {
+			throw new UnknownItemException("Elemento " + selfToBigIteger(i.getSelf()) + " non trovato");
+		}
 	}
 
 	@Override
 	public void removeItem(ItemReader item) throws DestroyedBookshelfException, UnknownItemException, ServiceException {
 		String self = ((ItemReaderImpl) item).getSelf();
 		BigInteger id_d = selfToBigIteger(self);
-		target.path("/bookshelves/").
+		Response resp =target.path("/bookshelves/").
 				path(getName()).
 				path(id_d.toString()).
 				request(MediaType.APPLICATION_JSON_TYPE).delete();
+		if(resp.getStatus()==404)
+			throw new DestroyedBookshelfException();
+		 /*
+	 	@todo: gestire elemento non presente nella bookshelf
+	 	@body: se un elemento non è presente nella bookshelf lancio una bad request, probabilmente devo cambiare la cosa
+	 	
+	 */
 	}
 
 	@Override

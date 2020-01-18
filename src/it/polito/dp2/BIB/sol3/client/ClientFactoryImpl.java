@@ -6,6 +6,7 @@ import java.net.URISyntaxException;
 import java.util.HashSet;
 import java.util.Set;
 
+import javax.ws.rs.BadRequestException;
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.Entity;
 import javax.ws.rs.client.WebTarget;
@@ -37,9 +38,14 @@ public class ClientFactoryImpl implements Client {
 		it.polito.dp2.BIB.sol3.client.Bookshelves.Bookshelf bs = new it.polito.dp2.BIB.sol3.client.Bookshelves.Bookshelf();
 		bs.setName(name);
 		// todo: l'aver creato la libreria lo considero già un accesso
-		bs.setReadNumbers(BigInteger.valueOf(1));
-		String name_r = target.path("/bookshelves").
+		bs.setReadNumbers(BigInteger.ZERO);
+		String name_r = null;
+		try{
+			name_r = target.path("/bookshelves").
 				request(MediaType.APPLICATION_JSON_TYPE).post(Entity.json(bs), String.class);
+		}catch (BadRequestException e) {
+			throw new ServiceException(e.getMessage());
+		}
 		if(name_r == null)
 			throw new ServiceException();
 		return new BookshelfReaderImpl(bs);
@@ -54,6 +60,7 @@ public class ClientFactoryImpl implements Client {
 				.get(Bookshelves.class);
 				for (it.polito.dp2.BIB.sol3.client.Bookshelves.Bookshelf i : items.getBookshelf()) {
 			itemSet.add(new BookshelfReaderImpl(i));
+	
 		}
 		return itemSet;
 	}
@@ -67,6 +74,7 @@ public class ClientFactoryImpl implements Client {
 				.queryParam("afterInclusive", since)
 			 	  .request(MediaType.APPLICATION_JSON_TYPE)
 			 	  .get(Items.class);
+		
 		for (Items.Item i : items.getItem()) {
 			itemSet.add(new ItemReaderImpl(i));
 		}

@@ -71,7 +71,7 @@ public class Neo4jDBE implements DBBS{
 	@Override
 	public boolean addItem(Item item, String bookshelf) throws Exception {
 		if(bs.get(bookshelf) == null)
-			throw new DestroyedBookshelfException();
+			throw new NotFoundException();
 		for(Item i: bs.get(bookshelf).getItem()){
 			if(i.getSelf().equals(item.getSelf()))
 				throw new BadRequestException("Bookshelf already contains this element");

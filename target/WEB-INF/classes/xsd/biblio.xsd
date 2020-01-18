@@ -27,7 +27,7 @@
 				<xsd:element name="self" type="xsd:anyURI" minOccurs="0"/>
 				<xsd:element name="name" type="xsd:string"/>
 				<xsd:element ref="item" minOccurs="0" maxOccurs="20"/>
-				<xsd:element name="readNumbers" type="xsd:positiveInteger"/>
+				<xsd:element name="readNumbers" type="xsd:nonNegativeInteger"/>
 			</xsd:sequence>
 		</xsd:complexType>
 	</xsd:element>

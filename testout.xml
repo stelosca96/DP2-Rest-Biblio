@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="5" failures="0" hostname="dp2-student" name="it.polito.dp2.BIB.ass3.tests.BibTests" skipped="0" tests="5" time="6.408" timestamp="2020-01-18T15:45:00">
+<testsuite errors="0" failures="1" hostname="dp2-student" name="it.polito.dp2.BIB.ass3.tests.BibTests" skipped="0" tests="5" time="38.493" timestamp="2020-01-18T19:26:47">
   <properties>
     <property name="it.polito.dp2.BIB.ass3.ClientFactory" value="it.polito.dp2.BIB.sol3.client.ClientFactory" />
     <property name="env.DESKTOP_SESSION" value="xfce" />
@@ -64,7 +64,7 @@
     <property name="ant.project.default-target" value="package-service" />
     <property name="env.HOME" value="/home/dp2" />
     <property name="catalina.home.bin.dir" value="/opt/tomcat/apache-tomcat-8.5.20/bin" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner it.polito.dp2.BIB.ass3.tests.BibTests methods=testCreateBookshelf,testBookShelfOperations,testRemoveItemFromBibliography,testNumberOfReads,testNonExistingBookshelf skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/home/dp2/Desktop/3r4/testout.xml formatter=org.apache.tools.ant.taskdefs.optional.junit.PlainJUnitResultFormatter crashfile=/home/dp2/Desktop/3r4/junitvmwatcher4225927683238881976.properties propsfile=/home/dp2/Desktop/3r4/junit6180703237634563019.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner it.polito.dp2.BIB.ass3.tests.BibTests methods=testCreateBookshelf,testBookShelfOperations,testRemoveItemFromBibliography,testNumberOfReads,testNonExistingBookshelf skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/home/dp2/Desktop/3r4/testout.xml formatter=org.apache.tools.ant.taskdefs.optional.junit.PlainJUnitResultFormatter crashfile=/home/dp2/Desktop/3r4/junitvmwatcher2532946450083308740.properties propsfile=/home/dp2/Desktop/3r4/junit7918626176914398131.properties" />
     <property name="tomcatUrl" value="http://localhost:8080/manager/text" />
     <property name="ant.file" value="/home/dp2/Desktop/3r4/build.xml" />
     <property name="env.LC_TELEPHONE" value="it_IT.UTF-8" />
@@ -190,131 +190,24 @@
     <property name="ant.file.type.tomcat-build" value="file" />
     <property name="sun.arch.data.model" value="32" />
   </properties>
-  <testcase classname="it.polito.dp2.BIB.ass3.tests.BibTests" name="testRemoveItemFromBibliography" time="0.817">
-    <error message="MessageBodyWriter not found for media type=application/json, type=class it.polito.dp2.BIB.sol3.client.ItemReaderImpl, genericType=class it.polito.dp2.BIB.sol3.client.ItemReaderImpl." type="org.glassfish.jersey.message.internal.MessageBodyProviderNotFoundException">org.glassfish.jersey.message.internal.MessageBodyProviderNotFoundException: MessageBodyWriter not found for media type=application/json, type=class it.polito.dp2.BIB.sol3.client.ItemReaderImpl, genericType=class it.polito.dp2.BIB.sol3.client.ItemReaderImpl.
-	at org.glassfish.jersey.message.internal.WriterInterceptorExecutor$TerminalWriterInterceptor.aroundWriteTo(WriterInterceptorExecutor.java:247)
-	at org.glassfish.jersey.message.internal.WriterInterceptorExecutor.proceed(WriterInterceptorExecutor.java:162)
-	at org.glassfish.jersey.message.internal.MessageBodyFactory.writeTo(MessageBodyFactory.java:1130)
-	at org.glassfish.jersey.client.ClientRequest.doWriteEntity(ClientRequest.java:517)
-	at org.glassfish.jersey.client.ClientRequest.writeEntity(ClientRequest.java:499)
-	at org.glassfish.jersey.client.internal.HttpUrlConnector._apply(HttpUrlConnector.java:393)
-	at org.glassfish.jersey.client.internal.HttpUrlConnector.apply(HttpUrlConnector.java:285)
-	at org.glassfish.jersey.client.ClientRuntime.invoke(ClientRuntime.java:252)
-	at org.glassfish.jersey.client.JerseyInvocation$2.call(JerseyInvocation.java:701)
-	at org.glassfish.jersey.internal.Errors.process(Errors.java:315)
-	at org.glassfish.jersey.internal.Errors.process(Errors.java:297)
-	at org.glassfish.jersey.internal.Errors.process(Errors.java:228)
-	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:444)
-	at org.glassfish.jersey.client.JerseyInvocation.invoke(JerseyInvocation.java:697)
-	at org.glassfish.jersey.client.JerseyInvocation$Builder.method(JerseyInvocation.java:448)
-	at org.glassfish.jersey.client.JerseyInvocation$Builder.put(JerseyInvocation.java:332)
-	at it.polito.dp2.BIB.sol3.client.BookshelfReaderImpl.addItem(BookshelfReaderImpl.java:46)
-	at it.polito.dp2.BIB.ass3.tests.BibTests.testRemoveItemFromBibliography(Unknown Source)
-</error>
+  <testcase classname="it.polito.dp2.BIB.ass3.tests.BibTests" name="testRemoveItemFromBibliography" time="1.814" />
+  <testcase classname="it.polito.dp2.BIB.ass3.tests.BibTests" name="testBookShelfOperations" time="6.964" />
+  <testcase classname="it.polito.dp2.BIB.ass3.tests.BibTests" name="testNonExistingBookshelf" time="15.969">
+    <failure message="Expected exception: it.polito.dp2.BIB.ass3.DestroyedBookshelfException" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Expected exception: it.polito.dp2.BIB.ass3.DestroyedBookshelfException
+</failure>
   </testcase>
-  <testcase classname="it.polito.dp2.BIB.ass3.tests.BibTests" name="testBookShelfOperations" time="0.378">
-    <error message="MessageBodyWriter not found for media type=application/json, type=class it.polito.dp2.BIB.sol3.client.ItemReaderImpl, genericType=class it.polito.dp2.BIB.sol3.client.ItemReaderImpl." type="org.glassfish.jersey.message.internal.MessageBodyProviderNotFoundException">org.glassfish.jersey.message.internal.MessageBodyProviderNotFoundException: MessageBodyWriter not found for media type=application/json, type=class it.polito.dp2.BIB.sol3.client.ItemReaderImpl, genericType=class it.polito.dp2.BIB.sol3.client.ItemReaderImpl.
-	at org.glassfish.jersey.message.internal.WriterInterceptorExecutor$TerminalWriterInterceptor.aroundWriteTo(WriterInterceptorExecutor.java:247)
-	at org.glassfish.jersey.message.internal.WriterInterceptorExecutor.proceed(WriterInterceptorExecutor.java:162)
-	at org.glassfish.jersey.message.internal.MessageBodyFactory.writeTo(MessageBodyFactory.java:1130)
-	at org.glassfish.jersey.client.ClientRequest.doWriteEntity(ClientRequest.java:517)
-	at org.glassfish.jersey.client.ClientRequest.writeEntity(ClientRequest.java:499)
-	at org.glassfish.jersey.client.internal.HttpUrlConnector._apply(HttpUrlConnector.java:393)
-	at org.glassfish.jersey.client.internal.HttpUrlConnector.apply(HttpUrlConnector.java:285)
-	at org.glassfish.jersey.client.ClientRuntime.invoke(ClientRuntime.java:252)
-	at org.glassfish.jersey.client.JerseyInvocation$2.call(JerseyInvocation.java:701)
-	at org.glassfish.jersey.internal.Errors.process(Errors.java:315)
-	at org.glassfish.jersey.internal.Errors.process(Errors.java:297)
-	at org.glassfish.jersey.internal.Errors.process(Errors.java:228)
-	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:444)
-	at org.glassfish.jersey.client.JerseyInvocation.invoke(JerseyInvocation.java:697)
-	at org.glassfish.jersey.client.JerseyInvocation$Builder.method(JerseyInvocation.java:448)
-	at org.glassfish.jersey.client.JerseyInvocation$Builder.put(JerseyInvocation.java:332)
-	at it.polito.dp2.BIB.sol3.client.BookshelfReaderImpl.addItem(BookshelfReaderImpl.java:46)
-	at it.polito.dp2.BIB.ass3.tests.BibTests.addItemsBookshelf(Unknown Source)
-	at it.polito.dp2.BIB.ass3.tests.BibTests.testBookShelfOperations(Unknown Source)
-</error>
-  </testcase>
-  <testcase classname="it.polito.dp2.BIB.ass3.tests.BibTests" name="testNonExistingBookshelf" time="0.253">
-    <error message="Unexpected exception, expected&lt;it.polito.dp2.BIB.ass3.DestroyedBookshelfException&gt; but was&lt;org.glassfish.jersey.message.internal.MessageBodyProviderNotFoundException&gt;" type="java.lang.Exception">java.lang.Exception: Unexpected exception, expected&lt;it.polito.dp2.BIB.ass3.DestroyedBookshelfException&gt; but was&lt;org.glassfish.jersey.message.internal.MessageBodyProviderNotFoundException&gt;
-Caused by: org.glassfish.jersey.message.internal.MessageBodyProviderNotFoundException: MessageBodyWriter not found for media type=application/json, type=class it.polito.dp2.BIB.sol3.client.ItemReaderImpl, genericType=class it.polito.dp2.BIB.sol3.client.ItemReaderImpl.
-	at org.glassfish.jersey.message.internal.WriterInterceptorExecutor$TerminalWriterInterceptor.aroundWriteTo(WriterInterceptorExecutor.java:247)
-	at org.glassfish.jersey.message.internal.WriterInterceptorExecutor.proceed(WriterInterceptorExecutor.java:162)
-	at org.glassfish.jersey.message.internal.MessageBodyFactory.writeTo(MessageBodyFactory.java:1130)
-	at org.glassfish.jersey.client.ClientRequest.doWriteEntity(ClientRequest.java:517)
-	at org.glassfish.jersey.client.ClientRequest.writeEntity(ClientRequest.java:499)
-	at org.glassfish.jersey.client.internal.HttpUrlConnector._apply(HttpUrlConnector.java:393)
-	at org.glassfish.jersey.client.internal.HttpUrlConnector.apply(HttpUrlConnector.java:285)
-	at org.glassfish.jersey.client.ClientRuntime.invoke(ClientRuntime.java:252)
-	at org.glassfish.jersey.client.JerseyInvocation$2.call(JerseyInvocation.java:701)
-	at org.glassfish.jersey.internal.Errors.process(Errors.java:315)
-	at org.glassfish.jersey.internal.Errors.process(Errors.java:297)
-	at org.glassfish.jersey.internal.Errors.process(Errors.java:228)
-	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:444)
-	at org.glassfish.jersey.client.JerseyInvocation.invoke(JerseyInvocation.java:697)
-	at org.glassfish.jersey.client.JerseyInvocation$Builder.method(JerseyInvocation.java:448)
-	at org.glassfish.jersey.client.JerseyInvocation$Builder.put(JerseyInvocation.java:332)
-	at it.polito.dp2.BIB.sol3.client.BookshelfReaderImpl.addItem(BookshelfReaderImpl.java:46)
-	at it.polito.dp2.BIB.ass3.tests.BibTests.testNonExistingBookshelf(Unknown Source)
-</error>
-  </testcase>
-  <testcase classname="it.polito.dp2.BIB.ass3.tests.BibTests" name="testCreateBookshelf" time="0.011">
-    <error message="HTTP 400 Bad Request" type="javax.ws.rs.BadRequestException">javax.ws.rs.BadRequestException: HTTP 400 Bad Request
-	at org.glassfish.jersey.client.JerseyInvocation.convertToException(JerseyInvocation.java:1011)
-	at org.glassfish.jersey.client.JerseyInvocation.translate(JerseyInvocation.java:819)
-	at org.glassfish.jersey.client.JerseyInvocation.access$700(JerseyInvocation.java:92)
-	at org.glassfish.jersey.client.JerseyInvocation$2.call(JerseyInvocation.java:701)
-	at org.glassfish.jersey.internal.Errors.process(Errors.java:315)
-	at org.glassfish.jersey.internal.Errors.process(Errors.java:297)
-	at org.glassfish.jersey.internal.Errors.process(Errors.java:228)
-	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:444)
-	at org.glassfish.jersey.client.JerseyInvocation.invoke(JerseyInvocation.java:697)
-	at org.glassfish.jersey.client.JerseyInvocation$Builder.method(JerseyInvocation.java:448)
-	at org.glassfish.jersey.client.JerseyInvocation$Builder.post(JerseyInvocation.java:349)
-	at it.polito.dp2.BIB.sol3.client.ClientFactoryImpl.createBookshelf(ClientFactoryImpl.java:42)
-	at it.polito.dp2.BIB.ass3.tests.BibTests.testCreateBookshelf(Unknown Source)
-</error>
-  </testcase>
-  <testcase classname="it.polito.dp2.BIB.ass3.tests.BibTests" name="testNumberOfReads" time="0.186">
-    <error message="MessageBodyWriter not found for media type=application/json, type=class it.polito.dp2.BIB.sol3.client.ItemReaderImpl, genericType=class it.polito.dp2.BIB.sol3.client.ItemReaderImpl." type="org.glassfish.jersey.message.internal.MessageBodyProviderNotFoundException">org.glassfish.jersey.message.internal.MessageBodyProviderNotFoundException: MessageBodyWriter not found for media type=application/json, type=class it.polito.dp2.BIB.sol3.client.ItemReaderImpl, genericType=class it.polito.dp2.BIB.sol3.client.ItemReaderImpl.
-	at org.glassfish.jersey.message.internal.WriterInterceptorExecutor$TerminalWriterInterceptor.aroundWriteTo(WriterInterceptorExecutor.java:247)
-	at org.glassfish.jersey.message.internal.WriterInterceptorExecutor.proceed(WriterInterceptorExecutor.java:162)
-	at org.glassfish.jersey.message.internal.MessageBodyFactory.writeTo(MessageBodyFactory.java:1130)
-	at org.glassfish.jersey.client.ClientRequest.doWriteEntity(ClientRequest.java:517)
-	at org.glassfish.jersey.client.ClientRequest.writeEntity(ClientRequest.java:499)
-	at org.glassfish.jersey.client.internal.HttpUrlConnector._apply(HttpUrlConnector.java:393)
-	at org.glassfish.jersey.client.internal.HttpUrlConnector.apply(HttpUrlConnector.java:285)
-	at org.glassfish.jersey.client.ClientRuntime.invoke(ClientRuntime.java:252)
-	at org.glassfish.jersey.client.JerseyInvocation$2.call(JerseyInvocation.java:701)
-	at org.glassfish.jersey.internal.Errors.process(Errors.java:315)
-	at org.glassfish.jersey.internal.Errors.process(Errors.java:297)
-	at org.glassfish.jersey.internal.Errors.process(Errors.java:228)
-	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:444)
-	at org.glassfish.jersey.client.JerseyInvocation.invoke(JerseyInvocation.java:697)
-	at org.glassfish.jersey.client.JerseyInvocation$Builder.method(JerseyInvocation.java:448)
-	at org.glassfish.jersey.client.JerseyInvocation$Builder.put(JerseyInvocation.java:332)
-	at it.polito.dp2.BIB.sol3.client.BookshelfReaderImpl.addItem(BookshelfReaderImpl.java:46)
-	at it.polito.dp2.BIB.ass3.tests.BibTests.addItemsBookshelf(Unknown Source)
-	at it.polito.dp2.BIB.ass3.tests.BibTests.testNumberOfReads(Unknown Source)
-</error>
-  </testcase>
+  <testcase classname="it.polito.dp2.BIB.ass3.tests.BibTests" name="testCreateBookshelf" time="0.277" />
+  <testcase classname="it.polito.dp2.BIB.ass3.tests.BibTests" name="testNumberOfReads" time="1.287" />
   <system-out><![CDATA[Reference BibReader: Using file: xsd/biblio.xml
 property: http://localhost:8080/BiblioSystem/rest
 Reference BibReader: Using file: xsd/biblio.xml
 DEBUG: starting testRemoveItemFromBibliography
 Response code for creating an item: 201
 DEBUG: starting testBookShelfOperations
+DEBUG: testBookShelfOperations() 20 number of new items added to the Biography
 DEBUG: starting testNonExistingBookshelf
 DEBUG: starting testCreateBookshelf
 DEBUG: starting testNumberOfReads
 ]]></system-out>
-  <system-err><![CDATA[Jan 18, 2020 4:45:05 PM org.glassfish.jersey.message.internal.WriterInterceptorExecutor$TerminalWriterInterceptor aroundWriteTo
-SEVERE: MessageBodyWriter not found for media type=application/json, type=class it.polito.dp2.BIB.sol3.client.ItemReaderImpl, genericType=class it.polito.dp2.BIB.sol3.client.ItemReaderImpl.
-Jan 18, 2020 4:45:05 PM org.glassfish.jersey.message.internal.WriterInterceptorExecutor$TerminalWriterInterceptor aroundWriteTo
-SEVERE: MessageBodyWriter not found for media type=application/json, type=class it.polito.dp2.BIB.sol3.client.ItemReaderImpl, genericType=class it.polito.dp2.BIB.sol3.client.ItemReaderImpl.
-Jan 18, 2020 4:45:06 PM org.glassfish.jersey.message.internal.WriterInterceptorExecutor$TerminalWriterInterceptor aroundWriteTo
-SEVERE: MessageBodyWriter not found for media type=application/json, type=class it.polito.dp2.BIB.sol3.client.ItemReaderImpl, genericType=class it.polito.dp2.BIB.sol3.client.ItemReaderImpl.
-Jan 18, 2020 4:45:06 PM org.glassfish.jersey.message.internal.WriterInterceptorExecutor$TerminalWriterInterceptor aroundWriteTo
-SEVERE: MessageBodyWriter not found for media type=application/json, type=class it.polito.dp2.BIB.sol3.client.ItemReaderImpl, genericType=class it.polito.dp2.BIB.sol3.client.ItemReaderImpl.
-]]></system-err>
+  <system-err><![CDATA[]]></system-err>
 </testsuite>
