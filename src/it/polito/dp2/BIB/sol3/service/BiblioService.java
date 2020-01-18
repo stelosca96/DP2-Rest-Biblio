@@ -76,7 +76,7 @@ public class BiblioService {
 		rutil.completeItem(item, id);
 		return item;
 	}
-
+	
 	public BigInteger deleteItem(BigInteger id) throws ConflictServiceException, Exception {
 		try {
 			Item item = n4jDb.getItem(id);

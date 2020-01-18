@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="1" hostname="dp2-student" name="it.polito.dp2.BIB.ass3.tests.BibTests" skipped="0" tests="5" time="38.493" timestamp="2020-01-18T19:26:47">
+<testsuite errors="0" failures="0" hostname="dp2-student" name="it.polito.dp2.BIB.ass3.tests.BibTests" skipped="0" tests="5" time="3.509" timestamp="2020-01-18T22:50:19">
   <properties>
     <property name="it.polito.dp2.BIB.ass3.ClientFactory" value="it.polito.dp2.BIB.sol3.client.ClientFactory" />
     <property name="env.DESKTOP_SESSION" value="xfce" />
@@ -24,7 +24,7 @@
     <property name="src.dir" value="/home/dp2/Desktop/3r4/src" />
     <property name="env.XDG_SEAT" value="seat0" />
     <property name="env.LC_PAPER" value="it_IT.UTF-8" />
-    <property name="env.SESSION_MANAGER" value="local/dp2-student:@/tmp/.ICE-unix/1848,unix/dp2-student:/tmp/.ICE-unix/1848" />
+    <property name="env.SESSION_MANAGER" value="local/dp2-student:@/tmp/.ICE-unix/1693,unix/dp2-student:/tmp/.ICE-unix/1693" />
     <property name="sun.os.patch.level" value="unknown" />
     <property name="sol.build.file" value="sol_build.xml" />
     <property name="java.vendor.url" value="http://java.oracle.com/" />
@@ -42,13 +42,13 @@
     <property name="ant.project.invoked-targets" value="runFuncTest.real" />
     <property name="env.XDG_DATA_DIRS" value="/usr/share/xfce:/usr/share/xfce4:/usr/local/share:/usr/share:/var/lib/snapd/desktop:/usr/share" />
     <property name="env.GNOME_KEYRING_CONTROL" value="" />
-    <property name="env.UPSTART_SESSION" value="unix:abstract=/com/ubuntu/upstart-session/1000/1283" />
+    <property name="env.UPSTART_SESSION" value="unix:abstract=/com/ubuntu/upstart-session/1000/1302" />
     <property name="user.name" value="dp2" />
     <property name="env.LANG" value="en_US.UTF-8" />
     <property name="env.LC_MONETARY" value="it_IT.UTF-8" />
     <property name="sun.io.unicode.encoding" value="UnicodeLittle" />
     <property name="sun.jnu.encoding" value="UTF-8" />
-    <property name="env.DBUS_SESSION_BUS_ADDRESS" value="unix:abstract=/tmp/dbus-0jCBZ8rzIX" />
+    <property name="env.DBUS_SESSION_BUS_ADDRESS" value="unix:abstract=/tmp/dbus-5KzJv7nhZK" />
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
     <property name="env.LC_NAME" value="it_IT.UTF-8" />
     <property name="lib.dir" value="/home/dp2/Desktop/3r4/lib" />
@@ -64,7 +64,7 @@
     <property name="ant.project.default-target" value="package-service" />
     <property name="env.HOME" value="/home/dp2" />
     <property name="catalina.home.bin.dir" value="/opt/tomcat/apache-tomcat-8.5.20/bin" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner it.polito.dp2.BIB.ass3.tests.BibTests methods=testCreateBookshelf,testBookShelfOperations,testRemoveItemFromBibliography,testNumberOfReads,testNonExistingBookshelf skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/home/dp2/Desktop/3r4/testout.xml formatter=org.apache.tools.ant.taskdefs.optional.junit.PlainJUnitResultFormatter crashfile=/home/dp2/Desktop/3r4/junitvmwatcher2532946450083308740.properties propsfile=/home/dp2/Desktop/3r4/junit7918626176914398131.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner it.polito.dp2.BIB.ass3.tests.BibTests methods=testCreateBookshelf,testBookShelfOperations,testRemoveItemFromBibliography,testNumberOfReads,testNonExistingBookshelf skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/home/dp2/Desktop/3r4/testout.xml formatter=org.apache.tools.ant.taskdefs.optional.junit.PlainJUnitResultFormatter crashfile=/home/dp2/Desktop/3r4/junitvmwatcher4836281724848039843.properties propsfile=/home/dp2/Desktop/3r4/junit174541933852456019.properties" />
     <property name="tomcatUrl" value="http://localhost:8080/manager/text" />
     <property name="ant.file" value="/home/dp2/Desktop/3r4/build.xml" />
     <property name="env.LC_TELEPHONE" value="it_IT.UTF-8" />
@@ -77,7 +77,7 @@
     <property name="line.separator" value="&#xa;" />
     <property name="target" value="1.8" />
     <property name="server.location" value="/opt/tomcat/apache-tomcat-8.5.20" />
-    <property name="env.SSH_AGENT_PID" value="1857" />
+    <property name="env.SSH_AGENT_PID" value="1752" />
     <property name="env.CLUTTER_IM_MODULE" value="" />
     <property name="env.GLADE_MODULE_PATH" value=":" />
     <property name="java.vm.info" value="mixed mode" />
@@ -174,7 +174,7 @@
     <property name="file.separator" value="/" />
     <property name="java.runtime.version" value="1.8.0_141-b15" />
     <property name="sun.boot.class.path" value="/usr/lib/jvm/jdk1.8.0_141/jre/lib/resources.jar:/usr/lib/jvm/jdk1.8.0_141/jre/lib/rt.jar:/usr/lib/jvm/jdk1.8.0_141/jre/lib/sunrsasign.jar:/usr/lib/jvm/jdk1.8.0_141/jre/lib/jsse.jar:/usr/lib/jvm/jdk1.8.0_141/jre/lib/jce.jar:/usr/lib/jvm/jdk1.8.0_141/jre/lib/charsets.jar:/usr/lib/jvm/jdk1.8.0_141/jre/lib/jfr.jar:/usr/lib/jvm/jdk1.8.0_141/jre/classes" />
-    <property name="env.SSH_AUTH_SOCK" value="/tmp/ssh-OycIkyf8Dibl/agent.1856" />
+    <property name="env.SSH_AUTH_SOCK" value="/tmp/ssh-TW1E2MHApOfh/agent.1749" />
     <property name="env.QT4_IM_MODULE" value="" />
     <property name="env.XDG_RUNTIME_DIR" value="/run/user/1000" />
     <property name="env.XDG_CONFIG_DIRS" value="/etc/xdg/xdg-xfce:/usr/share/upstart/xdg:/etc/xdg:/etc/xdg" />
@@ -190,14 +190,11 @@
     <property name="ant.file.type.tomcat-build" value="file" />
     <property name="sun.arch.data.model" value="32" />
   </properties>
-  <testcase classname="it.polito.dp2.BIB.ass3.tests.BibTests" name="testRemoveItemFromBibliography" time="1.814" />
-  <testcase classname="it.polito.dp2.BIB.ass3.tests.BibTests" name="testBookShelfOperations" time="6.964" />
-  <testcase classname="it.polito.dp2.BIB.ass3.tests.BibTests" name="testNonExistingBookshelf" time="15.969">
-    <failure message="Expected exception: it.polito.dp2.BIB.ass3.DestroyedBookshelfException" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Expected exception: it.polito.dp2.BIB.ass3.DestroyedBookshelfException
-</failure>
-  </testcase>
-  <testcase classname="it.polito.dp2.BIB.ass3.tests.BibTests" name="testCreateBookshelf" time="0.277" />
-  <testcase classname="it.polito.dp2.BIB.ass3.tests.BibTests" name="testNumberOfReads" time="1.287" />
+  <testcase classname="it.polito.dp2.BIB.ass3.tests.BibTests" name="testRemoveItemFromBibliography" time="0.698" />
+  <testcase classname="it.polito.dp2.BIB.ass3.tests.BibTests" name="testBookShelfOperations" time="0.27" />
+  <testcase classname="it.polito.dp2.BIB.ass3.tests.BibTests" name="testNonExistingBookshelf" time="0.088" />
+  <testcase classname="it.polito.dp2.BIB.ass3.tests.BibTests" name="testCreateBookshelf" time="0.075" />
+  <testcase classname="it.polito.dp2.BIB.ass3.tests.BibTests" name="testNumberOfReads" time="0.226" />
   <system-out><![CDATA[Reference BibReader: Using file: xsd/biblio.xml
 property: http://localhost:8080/BiblioSystem/rest
 Reference BibReader: Using file: xsd/biblio.xml

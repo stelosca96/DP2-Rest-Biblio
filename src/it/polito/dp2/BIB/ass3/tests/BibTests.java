@@ -203,7 +203,7 @@ public class BibTests {
 		// delete the new added book item from the server
 		adminClient.removeItem(item);
 
-		assertNotNull("The getItems of the implementation under test generated a null set of ItemReader " + item.getSelf(), firstItems);
+		assertNotNull("The getItems of the implementation under test generated a null set of ItemReader ", firstItems);
 		assertNotNull("The getItems of the implementation under test generated a null set of ItemReader", secondItems);
 		assertNotNull("The getItems of the implementation under test generated a null set of ItemReader", thirdItems);
 

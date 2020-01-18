@@ -46,20 +46,32 @@ public class BookshelfReaderImpl implements it.polito.dp2.BIB.ass3.Bookshelf{
 		if(!(item instanceof ItemReaderImpl))
 			throw new UnknownItemException("You have to use ItemReaderImpl");
 		ItemReaderImpl i = (ItemReaderImpl) item;
-		try{
-		 target.path("/bookshelves/").
+//		try{
+		 Response resp = target.path("/bookshelves/").
 				path(getName()).
 				path(selfToBigIteger(i.getSelf()).toString()).
 				request(MediaType.APPLICATION_JSON_TYPE).post(null);
-		}catch(NotAcceptableException e1){
-			 throw new TooManyItemsException();
+		Integer statusCode = resp.getStatus();
+		switch (statusCode) {
+			case 400:
+				throw new UnknownItemException("Element " + selfToBigIteger(i.getSelf()) + " not found into db");
+			case 404:
+				throw new DestroyedBookshelfException();
+			case 406:
+				 throw new TooManyItemsException();
+			default:
+				break;
 		}
-		catch (NotFoundException e2) {
-			throw new DestroyedBookshelfException();
-		}
-		catch (BadRequestException e3) {
-			throw new UnknownItemException("Elemento " + selfToBigIteger(i.getSelf()) + " non trovato");
-		}
+		
+//		}catch(NotAcceptableException e1){
+//			 throw new TooManyItemsException();
+//		}
+//		catch (NotFoundException e2) {
+//			throw new DestroyedBookshelfException();
+//		}
+//		catch (BadRequestException e3) {
+//			throw new UnknownItemException("Elemento " + selfToBigIteger(i.getSelf()) + " non trovato");
+//		}
 	}
 
 	@Override
