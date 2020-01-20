@@ -4,11 +4,8 @@ import java.math.BigInteger;
 import java.util.HashSet;
 import java.util.Set;
 
-import javax.ws.rs.BadRequestException;
-import javax.ws.rs.NotAcceptableException;
 import javax.ws.rs.NotFoundException;
 import javax.ws.rs.client.ClientBuilder;
-import javax.ws.rs.client.Entity;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -21,12 +18,12 @@ import it.polito.dp2.BIB.ass3.TooManyItemsException;
 import it.polito.dp2.BIB.ass3.UnknownItemException;
 
 public class BookshelfReaderImpl implements it.polito.dp2.BIB.ass3.Bookshelf{
-	it.polito.dp2.BIB.sol3.client.Bookshelves.Bookshelf bookshelf;
+	it.polito.dp2.BIB.sol3.client.Bookshelf bookshelf;
 	javax.ws.rs.client.Client client;
 	WebTarget target;
 	static String uri = "http://localhost:8080/BiblioSystem/rest";
 
-	public BookshelfReaderImpl(it.polito.dp2.BIB.sol3.client.Bookshelves.Bookshelf i) {
+	public BookshelfReaderImpl(it.polito.dp2.BIB.sol3.client.Bookshelf i) {
 		this.bookshelf = i;
 		BookshelfReaderImpl.uri = uri.toString();
 		client = ClientBuilder.newClient();
@@ -74,11 +71,6 @@ public class BookshelfReaderImpl implements it.polito.dp2.BIB.ass3.Bookshelf{
 				request(MediaType.APPLICATION_JSON_TYPE).delete();
 		if(resp.getStatus()==404)
 			throw new DestroyedBookshelfException();
-		 /*
-	 	@todo: gestire elemento non presente nella bookshelf
-	 	@body: se un elemento non è presente nella bookshelf lancio una bad request, probabilmente devo cambiare la cosa
-	 	
-	 */
 		if(resp.getStatus()==400)
 			throw new UnknownItemException();
 	}
@@ -90,7 +82,7 @@ public class BookshelfReaderImpl implements it.polito.dp2.BIB.ass3.Bookshelf{
 			Items items = target.path("/bookshelves/").
 					path(getName()).
 					request(MediaType.APPLICATION_JSON_TYPE).get(Items.class);		
-			for(Items.Item item: items.getItem()){
+			for(Item item: items.getItem()){
 				set.add(new ItemReaderImpl(item));
 			}
 		}catch (NotFoundException e) {

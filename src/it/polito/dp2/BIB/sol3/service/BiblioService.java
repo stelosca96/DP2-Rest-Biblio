@@ -60,7 +60,6 @@ public class BiblioService {
 
 	public synchronized Item updateItem(BigInteger id, Item item) throws Exception {
 		Item ret = n4jDb.updateItem(id, item);
-		//todo: update n4jdbe items
 		if (ret!=null) {
 			rutil.completeItem(item, id);
 			n4jDbBS.updateBookshelfItem(item);
@@ -166,7 +165,7 @@ public class BiblioService {
 	
 	public synchronized void addBookShelfItem(String bookshelf, BigInteger id) throws Exception {
 		Item i = n4jDb.getItem(id);
-		if(i == null) //todo: gestire diversamente
+		if(i == null) 
 			throw new BadRequestException();
 		rutil.completeItem(i, id);
 		n4jDbBS.addItem(i, bookshelf);
@@ -188,7 +187,7 @@ public class BiblioService {
 
 	public synchronized void deleteBookshelfItem(String name, BigInteger id) throws Exception {
 		Item i = n4jDb.getItem(id);
-		if(i == null) //todo: gestire diversamente
+		if(i == null)
 			throw new BadRequestException();
 		rutil.completeItem(i, id);
 

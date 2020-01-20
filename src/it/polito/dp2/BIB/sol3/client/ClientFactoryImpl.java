@@ -35,9 +35,8 @@ public class ClientFactoryImpl implements Client {
 
 	@Override
 	public Bookshelf createBookshelf(String name) throws ServiceException {
-		it.polito.dp2.BIB.sol3.client.Bookshelves.Bookshelf bs = new it.polito.dp2.BIB.sol3.client.Bookshelves.Bookshelf();
+		it.polito.dp2.BIB.sol3.client.Bookshelf bs = new it.polito.dp2.BIB.sol3.client.Bookshelf();
 		bs.setName(name);
-		// todo: l'aver creato la libreria lo considero già un accesso
 		bs.setReadNumbers(BigInteger.ZERO);
 		String name_r = null;
 		try{
@@ -58,7 +57,7 @@ public class ClientFactoryImpl implements Client {
 				.queryParam("keyword", name)
 				.request(MediaType.APPLICATION_JSON_TYPE)
 				.get(Bookshelves.class);
-				for (it.polito.dp2.BIB.sol3.client.Bookshelves.Bookshelf i : items.getBookshelf()) {
+				for (it.polito.dp2.BIB.sol3.client.Bookshelf i : items.getBookshelf()) {
 			itemSet.add(new BookshelfReaderImpl(i));
 	
 		}
@@ -75,7 +74,7 @@ public class ClientFactoryImpl implements Client {
 			 	  .request(MediaType.APPLICATION_JSON_TYPE)
 			 	  .get(Items.class);
 		
-		for (Items.Item i : items.getItem()) {
+		for (Item i : items.getItem()) {
 			itemSet.add(new ItemReaderImpl(i));
 		}
 		

@@ -387,7 +387,6 @@ public class BiblioResources {
 			@ApiParam("The keyword to be used for the search") @QueryParam("keyword") @DefaultValue("") String keyword
 			) {
 		try {
-			//todo: gestione pagina
 			return service.getBookshelves(keyword);
 		} catch (Exception e) {
 			throw new InternalServerErrorException(e);

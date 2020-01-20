@@ -18,7 +18,7 @@ import com.sun.jersey.api.uri.UriTemplate;
 
 @Generated(value = {
     "wadl|http://localhost:8080/BiblioSystem/rest/application.wadl"
-}, comments = "wadl2java, http://wadl.java.net", date = "2020-01-20T11:13:46.081+01:00")
+}, comments = "wadl2java, http://wadl.java.net", date = "2020-01-20T13:09:16.880+01:00")
 public class Localhost_BiblioSystemRest {
 
     /**

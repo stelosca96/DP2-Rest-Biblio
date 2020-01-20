@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Set;
 
 import it.polito.dp2.BIB.ass3.ItemReader;
-import it.polito.dp2.BIB.sol3.client.Items.Item;
+import it.polito.dp2.BIB.sol3.service.jaxb.Item;
 
 public class ItemReaderImpl implements it.polito.dp2.BIB.ass3.ItemReader {
 

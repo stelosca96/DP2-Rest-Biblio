@@ -80,7 +80,7 @@
 	</target>
 
 	<!-- Target that builds the client -->
-	<target name="build-client" depends="init,generate-artifacts-client" description="Build your solution">
+	<target name="build-client" depends="init,generate-artifacts-client, generate-client-artifacts-bib" description="Build your solution">
 		<echo>Building the submitted solution (if needed)...</echo>
 		<javac destdir="${build.dir}" debug="${debug}" debuglevel="${debuglevel}" source="${source}" target="${target}" includeantruntime="false" encoding="ISO-8859-1">
 			<src path="${src.dir}"/>
@@ -103,6 +103,17 @@
 			<depends dir="${ass3.location}" includes="build.xml"/>
 			<customizations dir="." includes="binding.xjc"/>
 		</wjc>
+		<touch file="${gen.dir}/.flagfile" />
+	</target>
+	<!-- Target to generate artifacts for server (from biblio xsd) -->
+	<target name="generate-client-artifacts-bib" depends="init" description="generate artifacts for REST client">
+		<exec executable="xjc" failonerror="true">
+			<arg value="-d" />
+			<arg value="${gen.dir}" />
+			<arg value="-p" />
+			<arg value="it.polito.dp2.BIB.sol3.client" />
+			<arg value="${web.schema.dir}/biblio.xsd" />
+		</exec>
 		<touch file="${gen.dir}/.flagfile" />
 	</target>
 </project>
