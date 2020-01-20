@@ -58,7 +58,7 @@ public class BiblioService {
 			return item;
 	}
 
-	public Item updateItem(BigInteger id, Item item) throws Exception {
+	public synchronized Item updateItem(BigInteger id, Item item) throws Exception {
 		Item ret = n4jDb.updateItem(id, item);
 		//todo: update n4jdbe items
 		if (ret!=null) {
@@ -77,7 +77,7 @@ public class BiblioService {
 		return item;
 	}
 	
-	public BigInteger deleteItem(BigInteger id) throws ConflictServiceException, Exception {
+	public synchronized BigInteger deleteItem(BigInteger id) throws ConflictServiceException, Exception {
 		try {
 			Item item = n4jDb.getItem(id);
 			if(item != null){
@@ -164,7 +164,7 @@ public class BiblioService {
 //		return n4jDbBS.getItems(name);
 //	}
 	
-	public void addBookShelfItem(String bookshelf, BigInteger id) throws Exception {
+	public synchronized void addBookShelfItem(String bookshelf, BigInteger id) throws Exception {
 		Item i = n4jDb.getItem(id);
 		if(i == null) //todo: gestire diversamente
 			throw new BadRequestException();
@@ -186,10 +186,10 @@ public class BiblioService {
 //		return BigInteger.valueOf(id);
 //	}
 
-	public void deleteBookshelfItem(String name, BigInteger id) throws Exception {
+	public synchronized void deleteBookshelfItem(String name, BigInteger id) throws Exception {
 		Item i = n4jDb.getItem(id);
 		if(i == null) //todo: gestire diversamente
-			throw new NotFoundException();
+			throw new BadRequestException();
 		rutil.completeItem(i, id);
 
 		n4jDbBS.deleteItem(i, name);

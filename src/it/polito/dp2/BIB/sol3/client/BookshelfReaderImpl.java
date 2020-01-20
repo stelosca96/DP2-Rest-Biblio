@@ -62,16 +62,6 @@ public class BookshelfReaderImpl implements it.polito.dp2.BIB.ass3.Bookshelf{
 			default:
 				break;
 		}
-		
-//		}catch(NotAcceptableException e1){
-//			 throw new TooManyItemsException();
-//		}
-//		catch (NotFoundException e2) {
-//			throw new DestroyedBookshelfException();
-//		}
-//		catch (BadRequestException e3) {
-//			throw new UnknownItemException("Elemento " + selfToBigIteger(i.getSelf()) + " non trovato");
-//		}
 	}
 
 	@Override
@@ -89,33 +79,47 @@ public class BookshelfReaderImpl implements it.polito.dp2.BIB.ass3.Bookshelf{
 	 	@body: se un elemento non è presente nella bookshelf lancio una bad request, probabilmente devo cambiare la cosa
 	 	
 	 */
+		if(resp.getStatus()==400)
+			throw new UnknownItemException();
 	}
 
 	@Override
 	public Set<ItemReader> getItems() throws DestroyedBookshelfException, ServiceException {
 		HashSet<ItemReader> set = new HashSet<>();
-		Items items = target.path("/bookshelves/").
-				path(getName()).
-				request(MediaType.APPLICATION_JSON_TYPE).get(Items.class);		
-		for(Items.Item item: items.getItem()){
-			set.add(new ItemReaderImpl(item));
+		try{
+			Items items = target.path("/bookshelves/").
+					path(getName()).
+					request(MediaType.APPLICATION_JSON_TYPE).get(Items.class);		
+			for(Items.Item item: items.getItem()){
+				set.add(new ItemReaderImpl(item));
+			}
+		}catch (NotFoundException e) {
+			throw new DestroyedBookshelfException();	
 		}
 		return set;
 	}
 
 	@Override
 	public void destroyBookshelf() throws DestroyedBookshelfException, ServiceException {
-		target.path("/bookshelves/").
+		Response resp = target.path("/bookshelves/").
 		path(getName()).
 		request(MediaType.APPLICATION_JSON_TYPE).delete();		
+		if(resp.getStatus()==404)
+			throw new DestroyedBookshelfException();
 	}
 
 	@Override
 	public int getNumberOfReads() throws DestroyedBookshelfException {
-		String num = target.path("/bookshelves/").
-				path(getName()).path("/reads").
-				request(MediaType.APPLICATION_JSON_TYPE).get(String.class);
+		String num;
+		try{
+			num = target.path("/bookshelves/").
+					path(getName()).path("/reads").
+					request(MediaType.APPLICATION_JSON_TYPE).get(String.class);
+		}catch (NotFoundException e) {
+			throw new DestroyedBookshelfException();	
+		}
 		return Integer.valueOf(num);
+
 	}
 	
 	private static BigInteger selfToBigIteger(String self){

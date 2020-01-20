@@ -1,7 +1,6 @@
 package it.polito.dp2.BIB.sol3.service;
 
 import java.math.BigInteger;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -10,7 +9,6 @@ import javax.ws.rs.BadRequestException;
 import javax.ws.rs.NotAcceptableException;
 import javax.ws.rs.NotFoundException;
 
-import it.polito.dp2.BIB.ass3.DestroyedBookshelfException;
 import it.polito.dp2.BIB.sol3.db.DB;
 import it.polito.dp2.BIB.sol3.db.DBBS;
 import it.polito.dp2.BIB.sol3.service.jaxb.Bookshelf;
@@ -21,25 +19,22 @@ public class Neo4jDBE implements DBBS{
 	private Map<String, Bookshelf> bs;
 	// private Map<String, BigInteger> itemMap;
 
-	
-	private DB db;
 	private static Neo4jDBE n4jDbE = null;
 //	private Map<Bookshelf, String> sb;
 
 	private Neo4jDBE(DB n4jDb) {
-		this.db = n4jDb;
 		bs = new ConcurrentHashMap<>();
 		// itemMap = new ConcurrentHashMap<>();
 	}
 	
-	public static Neo4jDBE getNeo4jDB(DB n4jDb){
+	public synchronized static Neo4jDBE getNeo4jDB(DB n4jDb){
 		if(n4jDbE == null)
 			n4jDbE = new Neo4jDBE(n4jDb);
 		return n4jDbE;
 	}
 	
 	@Override
-	public String createBookShelf(Bookshelf bookshelf) throws Exception {
+	synchronized public String createBookShelf(Bookshelf bookshelf) throws Exception {
 		String name = bookshelf.getName();
 		if(name == null)
 			return null;
@@ -62,14 +57,14 @@ public class Neo4jDBE implements DBBS{
 
 
 	@Override
-	public List<Item> getItems(String name) throws Exception {
+	public synchronized List<Item> getItems(String name) throws Exception {
 		BigInteger count = bs.get(name).getReadNumbers().add(BigInteger.ONE);
 		bs.get(name).setReadNumbers(count);
 		return bs.get(name).getItem();
 	}
 
 	@Override
-	public boolean addItem(Item item, String bookshelf) throws Exception {
+	public synchronized boolean addItem(Item item, String bookshelf) throws Exception {
 		if(bs.get(bookshelf) == null)
 			throw new NotFoundException();
 		for(Item i: bs.get(bookshelf).getItem()){
@@ -82,7 +77,7 @@ public class Neo4jDBE implements DBBS{
 	}
 
 	@Override
-	public void deleteItem(Item item, String name) throws Exception {
+	public synchronized void deleteItem(Item item, String name) throws Exception {
 		Bookshelf bookshelf = bs.get(name);
 		if(bookshelf == null)
 			throw new NotFoundException("Bookshelf not found");
@@ -96,7 +91,7 @@ public class Neo4jDBE implements DBBS{
 	}
 
 	@Override
-	public String deleteBookShelf(String bookshelf) {
+	public synchronized String deleteBookShelf(String bookshelf) {
 		if(!bs.containsKey(bookshelf))
 			return null;
 		Bookshelf b = bs.remove(bookshelf);
@@ -104,7 +99,7 @@ public class Neo4jDBE implements DBBS{
 	}
 
 	@Override
-	public void deleteItem(Item item) throws Exception {
+	public synchronized void deleteItem(Item item) throws Exception {
 		for(Bookshelf bookshelf: bs.values()){
 			for(int c = 0; c<bookshelf.getItem().size(); c++){
 				if(bookshelf.getItem().get(c).getSelf().equals(item.getSelf())){
@@ -130,7 +125,7 @@ public class Neo4jDBE implements DBBS{
 
 
 	@Override
-	public Bookshelf getBookShelf(String name){
+	public synchronized Bookshelf getBookShelf(String name){
 		if(!bs.containsKey(name))
 			return null;
 		BigInteger readsNumber = bs.get(name).getReadNumbers();
@@ -139,7 +134,7 @@ public class Neo4jDBE implements DBBS{
 	}
 
 	@Override
-	public void updateBookshelfItem(Item item) {
+	public synchronized void updateBookshelfItem(Item item) {
 		for(Bookshelf bookshelf: bs.values()){
 			for(int c = 0; c<bookshelf.getItem().size(); c++){
 				if(bookshelf.getItem().get(c).getSelf().equals(item.getSelf())){

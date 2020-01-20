@@ -18,7 +18,7 @@ import com.sun.jersey.api.uri.UriTemplate;
 
 @Generated(value = {
     "wadl|http://localhost:8080/BiblioSystem/rest/application.wadl"
-}, comments = "wadl2java, http://wadl.java.net", date = "2020-01-18T23:50:18.251+01:00")
+}, comments = "wadl2java, http://wadl.java.net", date = "2020-01-20T11:13:46.081+01:00")
 public class Localhost_BiblioSystemRest {
 
     /**
@@ -400,7 +400,7 @@ public class Localhost_BiblioSystemRest {
                 }
             }
 
-            public it.polito.dp2.BIB.sol3.client.Bookshelves getAsBookshelvesXml(String keyword, Integer page) {
+            public it.polito.dp2.BIB.sol3.client.Bookshelves getAsBookshelvesXml(String keyword) {
                 UriBuilder localUriBuilder = _uriBuilder.clone();
                 if (keyword == null) {
                 }
@@ -408,13 +408,6 @@ public class Localhost_BiblioSystemRest {
                     localUriBuilder = localUriBuilder.replaceQueryParam("keyword", keyword);
                 } else {
                     localUriBuilder = localUriBuilder.replaceQueryParam("keyword", ((Object[]) null));
-                }
-                if (page == null) {
-                }
-                if (page!= null) {
-                    localUriBuilder = localUriBuilder.replaceQueryParam("page", page);
-                } else {
-                    localUriBuilder = localUriBuilder.replaceQueryParam("page", ((Object[]) null));
                 }
                 WebResource resource = _client.resource(localUriBuilder.buildFromMap(_templateAndMatrixParameterValues));
                 com.sun.jersey.api.client.WebResource.Builder resourceBuilder = resource.getRequestBuilder();
@@ -427,7 +420,7 @@ public class Localhost_BiblioSystemRest {
                 return response.getEntity(it.polito.dp2.BIB.sol3.client.Bookshelves.class);
             }
 
-            public<T >T getAsXml(String keyword, Integer page, GenericType<T> returnType) {
+            public<T >T getAsXml(String keyword, GenericType<T> returnType) {
                 UriBuilder localUriBuilder = _uriBuilder.clone();
                 if (keyword == null) {
                 }
@@ -435,13 +428,6 @@ public class Localhost_BiblioSystemRest {
                     localUriBuilder = localUriBuilder.replaceQueryParam("keyword", keyword);
                 } else {
                     localUriBuilder = localUriBuilder.replaceQueryParam("keyword", ((Object[]) null));
-                }
-                if (page == null) {
-                }
-                if (page!= null) {
-                    localUriBuilder = localUriBuilder.replaceQueryParam("page", page);
-                } else {
-                    localUriBuilder = localUriBuilder.replaceQueryParam("page", ((Object[]) null));
                 }
                 WebResource resource = _client.resource(localUriBuilder.buildFromMap(_templateAndMatrixParameterValues));
                 com.sun.jersey.api.client.WebResource.Builder resourceBuilder = resource.getRequestBuilder();
@@ -454,7 +440,7 @@ public class Localhost_BiblioSystemRest {
                 return response.getEntity(returnType);
             }
 
-            public<T >T getAsXml(String keyword, Integer page, Class<T> returnType) {
+            public<T >T getAsXml(String keyword, Class<T> returnType) {
                 UriBuilder localUriBuilder = _uriBuilder.clone();
                 if (keyword == null) {
                 }
@@ -462,13 +448,6 @@ public class Localhost_BiblioSystemRest {
                     localUriBuilder = localUriBuilder.replaceQueryParam("keyword", keyword);
                 } else {
                     localUriBuilder = localUriBuilder.replaceQueryParam("keyword", ((Object[]) null));
-                }
-                if (page == null) {
-                }
-                if (page!= null) {
-                    localUriBuilder = localUriBuilder.replaceQueryParam("page", page);
-                } else {
-                    localUriBuilder = localUriBuilder.replaceQueryParam("page", ((Object[]) null));
                 }
                 WebResource resource = _client.resource(localUriBuilder.buildFromMap(_templateAndMatrixParameterValues));
                 com.sun.jersey.api.client.WebResource.Builder resourceBuilder = resource.getRequestBuilder();
@@ -532,7 +511,7 @@ public class Localhost_BiblioSystemRest {
                 }
             }
 
-            public it.polito.dp2.BIB.sol3.client.Bookshelves getAsBookshelvesJson(String keyword, Integer page) {
+            public it.polito.dp2.BIB.sol3.client.Bookshelves getAsBookshelvesJson(String keyword) {
                 UriBuilder localUriBuilder = _uriBuilder.clone();
                 if (keyword == null) {
                 }
@@ -540,13 +519,6 @@ public class Localhost_BiblioSystemRest {
                     localUriBuilder = localUriBuilder.replaceQueryParam("keyword", keyword);
                 } else {
                     localUriBuilder = localUriBuilder.replaceQueryParam("keyword", ((Object[]) null));
-                }
-                if (page == null) {
-                }
-                if (page!= null) {
-                    localUriBuilder = localUriBuilder.replaceQueryParam("page", page);
-                } else {
-                    localUriBuilder = localUriBuilder.replaceQueryParam("page", ((Object[]) null));
                 }
                 WebResource resource = _client.resource(localUriBuilder.buildFromMap(_templateAndMatrixParameterValues));
                 com.sun.jersey.api.client.WebResource.Builder resourceBuilder = resource.getRequestBuilder();
@@ -559,7 +531,7 @@ public class Localhost_BiblioSystemRest {
                 return response.getEntity(it.polito.dp2.BIB.sol3.client.Bookshelves.class);
             }
 
-            public<T >T getAsJson(String keyword, Integer page, GenericType<T> returnType) {
+            public<T >T getAsJson(String keyword, GenericType<T> returnType) {
                 UriBuilder localUriBuilder = _uriBuilder.clone();
                 if (keyword == null) {
                 }
@@ -567,13 +539,6 @@ public class Localhost_BiblioSystemRest {
                     localUriBuilder = localUriBuilder.replaceQueryParam("keyword", keyword);
                 } else {
                     localUriBuilder = localUriBuilder.replaceQueryParam("keyword", ((Object[]) null));
-                }
-                if (page == null) {
-                }
-                if (page!= null) {
-                    localUriBuilder = localUriBuilder.replaceQueryParam("page", page);
-                } else {
-                    localUriBuilder = localUriBuilder.replaceQueryParam("page", ((Object[]) null));
                 }
                 WebResource resource = _client.resource(localUriBuilder.buildFromMap(_templateAndMatrixParameterValues));
                 com.sun.jersey.api.client.WebResource.Builder resourceBuilder = resource.getRequestBuilder();
@@ -586,7 +551,7 @@ public class Localhost_BiblioSystemRest {
                 return response.getEntity(returnType);
             }
 
-            public<T >T getAsJson(String keyword, Integer page, Class<T> returnType) {
+            public<T >T getAsJson(String keyword, Class<T> returnType) {
                 UriBuilder localUriBuilder = _uriBuilder.clone();
                 if (keyword == null) {
                 }
@@ -594,13 +559,6 @@ public class Localhost_BiblioSystemRest {
                     localUriBuilder = localUriBuilder.replaceQueryParam("keyword", keyword);
                 } else {
                     localUriBuilder = localUriBuilder.replaceQueryParam("keyword", ((Object[]) null));
-                }
-                if (page == null) {
-                }
-                if (page!= null) {
-                    localUriBuilder = localUriBuilder.replaceQueryParam("page", page);
-                } else {
-                    localUriBuilder = localUriBuilder.replaceQueryParam("page", ((Object[]) null));
                 }
                 WebResource resource = _client.resource(localUriBuilder.buildFromMap(_templateAndMatrixParameterValues));
                 com.sun.jersey.api.client.WebResource.Builder resourceBuilder = resource.getRequestBuilder();

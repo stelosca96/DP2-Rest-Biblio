@@ -366,6 +366,10 @@ public class BiblioResources {
 			return service.createBookShelf(bookshelf);
 		} catch (BadRequestException e){
 			throw e;
+		/* 
+		 * @todo rimuovere internal server error
+		 * @body gestire tutte le eccezioni generiche magari con una bad request, verificare cosa lancio
+		 */
 		} catch (Exception e1) {
 			throw new InternalServerErrorException();
 		}
@@ -380,8 +384,7 @@ public class BiblioResources {
     		})
 	@Produces({MediaType.APPLICATION_XML,MediaType.APPLICATION_JSON})
 	public Bookshelves getBookshelves(
-			@ApiParam("The keyword to be used for the search") @QueryParam("keyword") @DefaultValue("") String keyword,
-			@ApiParam("The page of results to be read") @QueryParam("page") @DefaultValue("1") int page
+			@ApiParam("The keyword to be used for the search") @QueryParam("keyword") @DefaultValue("") String keyword
 			) {
 		try {
 			//todo: gestione pagina
@@ -408,28 +411,7 @@ public class BiblioResources {
 		return bookshelf;
 	}
 	
-//	@POST
-//	@Path("/bookshelves/{name}")
-//    @ApiOperation(value = "addItem", notes = "add an item to the bookshelf", response=BigInteger.class
-//	)
-//    @ApiResponses(value = {
-//    		@ApiResponse(code = 201, message = "OK", response=BigInteger.class),
-//    		@ApiResponse(code = 400, message = "Bad Request"),
-//    		})
-//	@Consumes({MediaType.APPLICATION_XML,MediaType.APPLICATION_JSON})
-//	@Produces({MediaType.APPLICATION_XML,MediaType.APPLICATION_JSON})
-//	public BigInteger addItems(
-//			@ApiParam("The name of a bookshelf") @PathParam("name") String name, ItemReaderImpl item) {
-//		BigInteger id_r;
-//		try {
-//			id_r = service.addBookShelfItem(name, item);
-//		} catch (Exception e) {
-//			throw new BadRequestException();
-//		}
-//		return id_r;
-//	}
-//	
-	
+
 	@DELETE
 	@Path("/bookshelves/{name}")
     @ApiOperation(value = "deleteBookshelf", notes = "delete a single bookshelf"
@@ -446,61 +428,15 @@ public class BiblioResources {
 		return;
 	}
 	
-//	@GET
-//	@Path("/bookshelves/{name}/{id}")
-//    @ApiOperation(value = "getBookshelfItem", notes = "get an item from a bookshelf"
-//	)
-//    @ApiResponses(value = {
-//    		@ApiResponse(code = 200, message = "OK", response=Item.class),
-//    		@ApiResponse(code = 404, message = "Not Found"),
-//    		})
-//	@Produces({MediaType.APPLICATION_XML,MediaType.APPLICATION_JSON})
-//	public Item getBookshelfItem(
-//			@ApiParam("Read name of a bookshelf") @PathParam("name") String name,
-//			@ApiParam("Read id of item") @PathParam("id") BigInteger id) {
-//		
-//		try{
-//			for(Item i: service.getBookshelfItems(name))
-//		
-//		}catch (Exception e) {
-//			throw new BadRequestException();
-//		}
-		
-//		BigInteger id_r;
-//		try {
-//			id_r = service.addBookShelfItem(name, id);
-//		} catch (Exception e) {
-//			throw new BadRequestException();
-//		}
-//		return id_r;
-//	}
-//	@POST
-//	@Path("/bookshelves/{name}")
-//    @ApiOperation(value = "addItem", notes = "add an item to the bookshelf", response=BigInteger.class
-//	)
-//    @ApiResponses(value = {
-//    		@ApiResponse(code = 201, message = "OK"),
-//    		@ApiResponse(code = 400, message = "Bad Request"),
-//    		})
-////	@Consumes({MediaType.APPLICATION_XML,MediaType.APPLICATION_JSON})
-////	@Produces({MediaType.APPLICATION_XML,MediaType.APPLICATION_JSON})
-//	public Integer addItems2(
-//			@ApiParam("The name of a bookshelf") @PathParam("name") String name, Integer id) {
-//		try {
-//			service.addBookShelfItem(name, BigInteger.valueOf(id));
-//		} catch (Exception e) {
-//			throw new BadRequestException(e.getCause() + " " + e.getMessage());
-//		}
-//		return id;
-//	}
-	
 	@POST
 	@Path("/bookshelves/{name}/{id}")
     @ApiOperation(value = "addItem", notes = "add an item to the bookshelf", response=String.class
 	)
     @ApiResponses(value = {
     		@ApiResponse(code = 201, message = "OK"),
-    		@ApiResponse(code = 400, message = "Bad Request"),
+    		@ApiResponse(code = 400, message = "Bad Request: item not found"),
+    		@ApiResponse(code = 404, message = "Not found: destroyed bookshelf"),
+    		@ApiResponse(code = 406, message = "Not acceptable: too many items"),
     		})
 //	@Consumes({MediaType.APPLICATION_XML,MediaType.APPLICATION_JSON})
 //	@Produces({MediaType.APPLICATION_XML,MediaType.APPLICATION_JSON})
@@ -529,6 +465,7 @@ public class BiblioResources {
 	)
     @ApiResponses(value = {
     		@ApiResponse(code = 204, message = "No content"),
+    		@ApiResponse(code = 400, message = "Bad request"),
     		@ApiResponse(code = 404, message = "Not Found"),
     		})
 	public void deleteBookshelfItem(
@@ -540,7 +477,7 @@ public class BiblioResources {
 		} catch (NotFoundException e1) {
 			throw e1;	
 		} catch (Exception e2) {
-			throw new InternalServerErrorException();
+			throw new BadRequestException();
 		}
 	}
 	
